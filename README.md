@@ -77,7 +77,7 @@ The engine does not produce finished visual design, video, code or web builds, a
 | Formal tenders and expressions of interest | `proposal-skills` |
 | Business plans and full marketing plan documents | `business-plan-skills` |
 | Tax, accounting and financial statements | `chwezi-accounting-doctrine` |
-| Current facts and live research | `digital-research-skills` |
+| Current facts and live research | `digital-research-skills` (catalogue id; repository `chwezi-research-engine`) |
 
 Defaults apply unless you name another market: Uganda and East Africa, British English, UGX, East Africa Time (UTC+3) and a WhatsApp-first channel mix.
 
@@ -272,7 +272,7 @@ The evidence for the October 2026 Kaizen cycles is in two folders:
 
 Each folder holds the same records, with its `logs/` and `tasks/`: scope and evidence, baseline scorecard, backlog, currentness, experiment log, validation record, final report and next-cycle handoff. The [documentation index](docs/README.md) lists the earlier dated records.
 
-Every Kaizen cycle starts from the currentness gate of the Digital Research engine (`digital-research-skills`; some machines still hold it in a folder named `chwezi-research-engine`).
+Every Kaizen cycle starts from the currentness gate of the Digital Research engine (GitHub repository `chwezi-research-engine`; catalogue id `digital-research-skills`).
 
 ### Latest published score
 
