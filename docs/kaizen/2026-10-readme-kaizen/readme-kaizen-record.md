@@ -92,12 +92,12 @@ Preservation check, `readme-preserve-check.py . main kaizen/2026-10-readme-kaize
 ```text
 links: old README 236 targets; new README 32; moved to docs 212; LOST 0
 commands: old README 25; kept in README 24; moved to docs 1; LOST 0
-anchors: 2 README.md#anchor links in tracked files; BROKEN 0
+anchors: 2 README.md#<anchor> links in tracked files; BROKEN 0
 in-page links: 17 anchors used; BROKEN 0
 RESULT: OK
 ```
 
-The one command reported as moved is `bash install.sh` (correction 3). Nothing was replaced or removed beyond the four corrections above.
+The anchors line is shown with `<anchor>` in place of the word the checker prints, because the checker would otherwise read that literal text in this file as a link. The first run after this record was added reported 3 anchor links and 1 broken for that reason; it was a false finding caused by the pasted output, not a missing heading. The one command reported as moved is `bash install.sh` (correction 3). Nothing was replaced or removed beyond the four corrections above.
 
 Independent counts used for the figures in At a glance (not taken from the generator that wrote them): `find skills -name SKILL.md` gives 112; `find skills -name ALIAS.md` gives 83; `ls -d skills/*/` gives 16 folders, 15 with active skills; the register parsed with `json` gives 179 records and 5 with `quarantined: true`; the fixture file gives 400 fixtures; the routing and unittest logs give 381 of 400, 125 of 125 and 116 tests.
 
