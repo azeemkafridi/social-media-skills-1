@@ -1,0 +1,9 @@
+active-content 1 lines in 1 files
+    ('skills/meta-utility/skill-writing/SKILL.md', 13)
+router 4 lines in 1 files
+    ('AGENTS.md', 47)
+    ('AGENTS.md', 60)
+    ('AGENTS.md', 232)
+    ('AGENTS.md', 440)
+docs-history 27 lines in 18 files
+broken relative links (README/AGENTS/CONTRIBUTING/rules/prompts/docs): 0 in 0 files
