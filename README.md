@@ -41,6 +41,7 @@ Figures as of 2026-10-31.
 ## Contents
 
 - [When to use it](#when-to-use-it)
+- [Capabilities](#capabilities)
 - [Find the right skill](#find-the-right-skill)
 - [How it works](#how-it-works)
 - [Standards the engine checks against](#standards-the-engine-checks-against)
@@ -81,7 +82,11 @@ The engine does not produce finished visual design, video, code or web builds, a
 
 Defaults apply unless you name another market: Uganda and East Africa, British English, UGX, East Africa Time (UTC+3) and a WhatsApp-first channel mix.
 
-## Find the right skill
+## Capabilities
+
+The engine holds 112 active skills in 15 categories, grouped under [What is inside](#what-is-inside); a further 83 retired skills route to an active owner. The table under Find the right skill is the capability map: common tasks and the skill that handles each.
+
+### Find the right skill
 
 Describe the task in plain words. The router in [`AGENTS.md`](AGENTS.md) chooses the skill. If you already know the task, open the skill directly. The tasks below paraphrase prompts in `tests/routing-fixtures.json`.
 
