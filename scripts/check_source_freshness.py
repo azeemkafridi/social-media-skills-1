@@ -26,6 +26,29 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def release_errors(label: str, record: dict, as_of: date, still_quarantined: bool) -> list[str]:
+    """A quarantine may be released only with evidence: scope, basis, partial or verified status, same-day verification."""
+    errors: list[str] = []
+    if still_quarantined:
+        errors.append(f"{label}: a record cannot be both released and quarantined")
+    if record.get("support_status") not in ("partial", "verified"):
+        errors.append(f"{label}: released quarantine requires support_status partial or verified")
+    for key in ("scope", "release_basis"):
+        value = record.get(key)
+        if not isinstance(value, str) or not value.strip():
+            errors.append(f"{label}: released quarantine requires a non-empty {key}")
+    try:
+        released = date.fromisoformat(record["quarantine_released_on"])
+    except (TypeError, ValueError):
+        errors.append(f"{label}: released quarantine requires a valid quarantine_released_on date")
+        return errors
+    if released > as_of:
+        errors.append(f"{label}: quarantine_released_on is in the future relative to as-of date")
+    if record.get("verified_on") != released.isoformat():
+        errors.append(f"{label}: quarantine_released_on must equal verified_on (a release is a verification)")
+    return errors
+
+
 def validate(register: Path, as_of: date) -> list[str]:
     try:
         payload = json.loads(register.read_text(encoding="utf-8"))
@@ -111,6 +134,8 @@ def validate(register: Path, as_of: date) -> list[str]:
                     errors.append(f"{label}: QUARANTINED; current support NOT_ASSESSED; {review_state}")
         elif review < as_of:
             errors.append(f"{label}: overdue since {review.isoformat()}")
+        if "quarantine_released_on" in record:
+            errors.extend(release_errors(label, record, as_of, quarantine_flag is True))
     missing_domains = sorted(DOMAINS - present_domains)
     if missing_domains:
         errors.append(f"register: missing domains {', '.join(missing_domains)}")

@@ -61,6 +61,50 @@ class SourceFreshnessNegativeTests(unittest.TestCase):
         self.assertTrue(any('quarantined_on is in the future' in error
                             for error in self.check(payload, date(2026, 1, 15))))
 
+    def released(self):
+        payload = self.payload()
+        payload['records'][0].update({
+            'verified_on': '2026-01-10', 'next_review': '2026-02-09',
+            'quarantine_released_on': '2026-01-10',
+            'support_status': 'partial',
+            'scope': 'Synthetic: section headings only, no amendment chain checked.',
+            'release_basis': 'Synthetic: primary text opened and read on the release date.',
+        })
+        return payload
+
+    def test_released_quarantine_with_basis_passes(self):
+        self.assertEqual([], self.check(self.released(), date(2026, 1, 15)))
+
+    def test_released_quarantine_requires_scope_basis_status_and_matching_date(self):
+        for field, value, needle in [
+            ('scope', '', 'scope'),
+            ('release_basis', ' ', 'release_basis'),
+            ('support_status', 'NOT_ASSESSED', 'partial or verified'),
+            ('support_status', 'verified', None),
+            ('quarantine_released_on', '2026-01-09', 'verified_on'),
+            ('quarantine_released_on', 'not-a-date', 'valid quarantine_released_on'),
+        ]:
+            bad = self.released()
+            bad['records'][0][field] = value
+            errors = self.check(bad, date(2026, 1, 15))
+            if needle is None:
+                self.assertEqual([], errors)  # verified is an allowed state
+            else:
+                self.assertTrue(any(needle in error for error in errors), (field, value, errors))
+
+    def test_released_record_cannot_still_be_quarantined(self):
+        bad = self.released()
+        bad['records'][0].update({'quarantined': True, 'quarantined_on': '2026-01-12',
+                                  'quarantine_reason': 'Synthetic.'})
+        bad['records'][0]['support_status'] = 'NOT_ASSESSED'
+        errors = self.check(bad, date(2026, 1, 15))
+        self.assertTrue(any('cannot be both released and quarantined' in error for error in errors))
+
+    def test_release_date_in_the_future_is_refused(self):
+        bad = self.released()
+        errors = self.check(bad, date(2026, 1, 5))
+        self.assertTrue(any('quarantine_released_on is in the future' in error for error in errors))
+
     def test_malformed_quarantine_flag_fails_closed(self):
         payload = self.payload()
         payload['records'][0]['quarantined'] = 'true'
