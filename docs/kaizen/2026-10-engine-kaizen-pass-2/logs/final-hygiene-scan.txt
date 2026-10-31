@@ -1,0 +1,8 @@
+active-content 1 lines in 1 files
+    ('scripts/check_machine_paths.py', 20)
+router 3 lines in 1 files
+    ('AGENTS.md', 47)
+    ('AGENTS.md', 60)
+    ('AGENTS.md', 443)
+docs-history 27 lines in 18 files
+broken relative links (README/AGENTS/CONTRIBUTING/rules/prompts/docs): 0 in 0 files

@@ -108,6 +108,9 @@ Apply these alongside the main deliverable skill when relevant:
   separation and reversible experiments; it never supplies current platform facts.
 - `content-writing/references/direct-marketing-ethics-filter.md`: mandatory for
   every ad, offer, outreach sequence, influencer brief and sales page.
+- `content-writing/references/uganda-advertising-standards-check.md`: clause screen for
+  Ugandan advertising claims, testimonials, permissions, labelling and refund terms (UCC
+  Advertising Standards 2019); states which parts are `NOT_ASSESSED`.
 
 ## Routing Rules
 

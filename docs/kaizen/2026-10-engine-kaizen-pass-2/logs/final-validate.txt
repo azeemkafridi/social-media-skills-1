@@ -1,0 +1,4 @@
+$ python3 -B -X utf8 scripts/validate_skill_engine.py --baseline quality-baseline.json
+skills=112 compliant=112 failures=0 median_lines=121.0
+
+EXIT=0

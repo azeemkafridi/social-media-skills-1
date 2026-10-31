@@ -1,0 +1,11 @@
+# Independent cross-checks (not produced by the validators under test), 2026-10-31
+fixture lines in tests/routing-fixtures.json: 400
+active SKILL.md files (find): 112
+ALIAS.md files (find): 83
+register records quarantined:true (python): 5
+register records total (python): 179
+files in active surfaces carrying a Windows host-path marker (plain grep, not the checker's code):
+AGENTS.md
+scripts/check_machine_paths.py
+(scripts/check_machine_paths.py appears because it holds the pattern itself)
+git commits on branch since main: 9

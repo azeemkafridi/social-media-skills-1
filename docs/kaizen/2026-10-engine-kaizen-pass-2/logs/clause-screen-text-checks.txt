@@ -1,0 +1,27 @@
+FOUND   UCC: 12) Identification of advertisements (a) Advertisements shall be clearly distinguishable a
+FOUND   UCC: The word “new” or words implying “new” shall be used for only a 6-month period
+FOUND   UCC: no later than 180 calendar days after “date of proven first usage”
+FOUND   UCC: unless their express prior permission has been obtained
+FOUND   UCC: the period and conditions for which the offer is valid shall be stipulated in the advertis
+FOUND   UCC: Testimonials shall not contain any claims to efficacy which cannot justifiably be attribut
+FOUND   UCC: Before advertising is published, advertisers shall hold in their possession documentary ev
+FOUND   UCC: principal responsibility for observing its terms shall rest with the advertiser
+FOUND   UCC: bi or multifaceted media for advertising that includes broadcasting
+FOUND   UCC: “Guarantee” and “warranty” shall be used by advertisers to describe a formal written under
+FOUND   DPPA: shall immediately notify the Authority in the prescribed manner
+FOUND   DPPA: shall within fourteen days after receipt of the notice
+FOUND   DPPA: A person shall not sell or offer for sale personal data
+FOUND   DPPA: entitled to apply to a Court of competent jurisdiction for compensation
+MISSING TZ: shall not collect or process personal data without being registered
+MISSING TZ: The period of registration shall be five years
+term 'internet' occurrences in UCC text: 0
+term 'social media' occurrences in UCC text: 0
+term 'influencer' occurrences in UCC text: 0
+term 'facebook' occurrences in UCC text: 0
+term 'tiktok' occurrences in UCC text: 0
+term 'whatsapp' occurrences in UCC text: 0
+term 'online' occurrences in UCC text: 0
+missing: 2
+FOUND   TZ (non-layout extraction): shall not collect or process personal data without being registered
+FOUND   TZ (non-layout extraction): the period of registration shall be five years
+note: the two TZ misses in the layout-mode check are a column-interleaving artefact of 'pdftotext -layout'; the non-layout extraction above finds both phrases.
