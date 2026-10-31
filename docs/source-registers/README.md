@@ -1,6 +1,6 @@
 # Current-source registers
 
-Last full verification: 13 July 2026. A scoped source review on 29 October 2026 refreshed thirteen entries and quarantined ten overdue entries; this was not a full-register or legal review. See [the October 2026 Kaizen currentness record](../kaizen/2026-10-engine-kaizen/03-currentness.md). The freshness gate remains blocked until each quarantined entry is re-verified or removed from use with its dependent claims retired.
+Last full verification: 13 July 2026. A scoped source review on 29 October 2026 refreshed thirteen entries and quarantined ten overdue entries; a second scoped review on 31 October 2026 released five quarantines and re-checked one more record from primary text, leaving five quarantined (`UG-DPPR-2021`, `UG-COPYRIGHT-2026`, `KE-DP-GENERAL-2021`, `RW-DPP-2021` and `ITU-INTERNET-USAGE`). Neither review was a full-register or legal review. See the [October 2026 pass 1](../kaizen/2026-10-engine-kaizen/03-currentness.md) and [pass 2](../kaizen/2026-10-engine-kaizen-pass-2/03-currentness.md) currentness records. The freshness gate stays blocked (it exits 1) until each quarantined entry is re-verified or removed from use with its dependent claims retired. The register holds 179 records; the legal and market release gate rows that cite `UG-DPPR-2021` and `KE-DP-GENERAL-2021` rest on quarantined records and are `NOT_ASSESSED` until those are read.
 
 `source-register.json` is the release-controlled register for changing legal, platform and market sources. Tier 1 means a statute, regulator, platform owner or intergovernmental data owner. It does not mean that an interpretation is legal advice or that a platform page will remain unchanged.
 
@@ -25,8 +25,9 @@ A quarantined record stays `NOT_ASSESSED` until its primary text has been opened
 
 Run the freshness gate:
 
-```powershell
-python -X utf8 scripts\check_source_freshness.py
+```sh
+python3 -X utf8 scripts/check_source_freshness.py
+python3 -X utf8 scripts/check_source_freshness.py --as-of 2026-12-01   # preview which records will be overdue on a future date
 ```
 
 Adding a record requires a stable unique ID, current URL, publisher, tier, jurisdiction, verification date, review interval, next-review date, intended uses and a verification note. The checker rejects duplicate IDs, missing fields, invalid dates, inconsistent review dates and overdue records.
