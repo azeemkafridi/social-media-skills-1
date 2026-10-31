@@ -43,8 +43,7 @@ operates within.
 ## Mandatory Digital Research currentness gate for Kaizen
 
 Every Kaizen audit, skill edit, reference update, validator change, and
-standardisation decision MUST begin with the Digital Research Engine at
-`C:\wamp64\www\digital-research-engine`. Read its `source-evaluation` and
+standardisation decision MUST begin with the Digital Research Engine (catalogue id `digital-research-skills`; resolve its checkout through the active engine-routing table or `chwezi-engine-agents/catalog/engines.yaml`, never a fixed path). Read its `source-evaluation` and
 `source-verification` skills and the currentness gate reference
 `docs/continuous-improvement/kaizen-currentness-gate.md`.
 
@@ -57,7 +56,7 @@ primary sources; quarantine stale/ambiguous/unsupported claims and mark them
 
 Shared agent, command, hook, evidence, and handoff behavior is mapped for
 social-media work in [`docs/control-plane-adoption.md`](docs/control-plane-adoption.md)
-and governed centrally by `C:\wamp64\www\chwezi-dev-engine\docs\engine-control-plane.md`.
+and governed centrally by `chwezi-dev-engine/docs/engine-control-plane.md` (resolve `chwezi-dev-engine` through the active engine-routing table or the catalogue).
 
 ## Purpose
 
@@ -440,4 +439,4 @@ For a prompt handoff, read the local [domain prompt contract](docs/ai-prompting/
 
 ## PORTFOLIO CRAFT CONTRACT
 
-Load `C:\wamp64\www\chwezi-engine-agents\docs\operations\portfolio-craft-standard-2026-09-04.md` when available. Build a campaign in deliberate content units: frame the audience and channel job, select one post or asset, inspect brand and evidence context, draft with a distinct point of view, check platform fit and moderation risk, review the visual/audio treatment, refine, and record the approval and measurement plan. Real examples, source status, correction handling, and a meaningful next action matter more than volume. Do not generate a calendar full of interchangeable posts. Apply `Observe -> Baseline -> Select -> Experiment -> Check -> Standardise -> Teach -> Re-measure` to kaizen itself. Missing source, rights, platform, render, approval, or performance evidence is `NOT ASSESSED`, never a pass.
+Load `chwezi-engine-agents/docs/operations/portfolio-craft-standard-2026-09-04.md` when available (resolve `chwezi-engine-agents` through the active engine-routing table or the catalogue). Build a campaign in deliberate content units: frame the audience and channel job, select one post or asset, inspect brand and evidence context, draft with a distinct point of view, check platform fit and moderation risk, review the visual/audio treatment, refine, and record the approval and measurement plan. Real examples, source status, correction handling, and a meaningful next action matter more than volume. Do not generate a calendar full of interchangeable posts. Apply `Observe -> Baseline -> Select -> Experiment -> Check -> Standardise -> Teach -> Re-measure` to kaizen itself. Missing source, rights, platform, render, approval, or performance evidence is `NOT ASSESSED`, never a pass.
