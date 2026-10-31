@@ -4,7 +4,7 @@ Notable changes to the Social Media Skills Engine (repository `social-media-skil
 
 ## 2026-10-31: Kaizen pass 2 and documentation wave
 
-The pass 2 commits were made on branch `kaizen/2026-10-pass2` and are on `main`. Scores are self-assessed: raw 60.0, published `min(raw, 65)` 60.0 (pass 1 closed at 58.5; pass 2 baseline 58.2). The source-freshness gate still exits 1 because five quarantined records remain overdue ([final report](docs/kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md)).
+The pass 2 commits were made on branch `kaizen/2026-10-pass2` and are on `main`. Scores are self-assessed: raw 60.0, published `min(raw, 65)` 60.0 (pass 1 closed at 58.5; pass 2 baseline 58.2). The source-freshness gate still exits 1 because five quarantined records remain overdue ([final report](docs/kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md)). The README section [What the October 2026 kaizen improved](README.md#what-the-october-2026-kaizen-improved) gives the before and after figures for both October cycles, with the basis of each figure.
 
 ### Safety and legal accuracy
 
