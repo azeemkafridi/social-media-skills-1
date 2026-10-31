@@ -5,7 +5,7 @@ Read before any contact list is used, matched or messaged. Parent skill: [biz-de
 ## Uganda (register PL-01, checked 2026-09-23)
 
 - Every data collector, processor and controller must register with the Personal Data Protection Office unless exempted by gazette notice; registration is valid for 12 months (Data Protection and Privacy Regulations 2021). Confirm current fees with the PDPO.
-- Processing personal data without prior consent (s.7) is an offence; collecting a list therefore needs consent or another basis the Act permits.
+- Section 7 forbids collecting or processing personal data without the data subject's prior consent unless an exception in s.7(2) applies (authorised or required by law, a contract with the person, medical purposes, a legal obligation and a few public-duty cases), and a person who objects can require the collection or processing to stop (s.7(3)). Section 7 carries no penalty of its own: the Act's offences are ss.35 to 37 (unlawful obtaining or disclosure, unlawful destruction or alteration, sale of personal data), and a breach of s.7 is raised as a complaint to the Authority (ss.31 to 33). Collecting a list therefore needs consent or another basis the Act permits. Read against the ULII text of the Act on 2026-10-31 (register `UG-DPPA-2019`).
 - **Direct marketing (s.26) is an objection right:** a person may, by written notice, require the controller to stop processing for direct marketing; the controller must respond within 14 days.
 - **Do not state that the Act "requires opt-in for all marketing".** It has no ePrivacy-style opt-in rule, but the s.7 consent requirement applies to collecting the data.
 - The Act now appears as Cap. 97 in the 2023 revised laws.
