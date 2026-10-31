@@ -1,6 +1,8 @@
 # Social Media Skills Engine
 
-The Social Media Skills Engine (repository `social-media-skills`) is the Chwezi digital marketing and advertising engine: a library of 112 routed skills for consultancy work in Uganda and East Africa. It plans, specifies, writes, audits and reports. Spending money, changing live ad accounts, publishing and contacting people always require explicit client authority.
+The Social Media Skills Engine (repository `social-media-skills`) is the Chwezi digital marketing and advertising engine: a library of 112 routed skills for consultancy work in Uganda and East Africa.
+
+It plans, specifies, writes, audits and reports. Spending money, changing live ad accounts, publishing and contacting people always require explicit client authority.
 
 It is for agency owners, account leads, strategists, media planners, copywriters, paid-media specialists, in-house marketing teams and founders who need reviewable, evidence-backed marketing decisions. Every deliverable passes an anti-slop and human-review gate.
 
@@ -48,6 +50,7 @@ Figures as of 2026-10-31.
 - [Validation](#validation)
 - [Quality and improvement](#quality-and-improvement)
 - [What the October 2026 kaizen improved](#what-the-october-2026-kaizen-improved)
+- [The 17 changes, by type](#the-17-changes-by-type)
 - [Skill catalogue: strategy, advertising and measurement](#skill-catalogue-strategy-advertising-and-measurement)
 - [Skill catalogue: content, channels, operations and training](#skill-catalogue-content-channels-operations-and-training)
 - [Retired skill routes](#retired-skill-routes)
@@ -105,7 +108,10 @@ Claude Code reads [`CLAUDE.md`](CLAUDE.md), which imports [`AGENTS.md`](AGENTS.m
 
 - **Skills.** Each skill is `skills/<category>/<skill-name>/SKILL.md`, with optional `references/`, `scripts/` and `assets/`. A `SKILL.md` stays within 300 lines. Deeper material sits in `references/`.
 - **Pipeline.** Skills `01` to `13` in `skills/pipeline/` run in order from client brief to campaign brief. Other skills join at any step.
-- **Gates.** Every deliverable passes the anti-slop gate (`ai-marketing/anti-ai-slop`). Finished creative also passes [`docs/quality-gates/creative-review-gate.md`](docs/quality-gates/creative-review-gate.md). Paid media, WhatsApp, influencer, AI, UGC, public-sector and current-market work also passes [`docs/quality-gates/legal-market-release-gate.md`](docs/quality-gates/legal-market-release-gate.md).
+- **Gates.**
+  - Every deliverable passes the anti-slop gate (`ai-marketing/anti-ai-slop`).
+  - Finished creative also passes [`docs/quality-gates/creative-review-gate.md`](docs/quality-gates/creative-review-gate.md).
+  - Paid media, WhatsApp, influencer, AI, UGC, public-sector and current-market work also passes [`docs/quality-gates/legal-market-release-gate.md`](docs/quality-gates/legal-market-release-gate.md).
 - **Evidence.** Platform, legal and market claims cite a record in the source register. A stale or unavailable source makes the check `not assessed`.
 - **Control plane.** The shared agent, hook and handoff behaviour is mapped in [`docs/control-plane-adoption.md`](docs/control-plane-adoption.md).
 
@@ -130,7 +136,9 @@ The engine works to named standards rather than house opinion.
 
 ## What is inside
 
-The engine holds 112 active `SKILL.md` files across 15 category folders under `skills/`. A further folder, `frameworks/`, holds only inactive aliases. The tables in this README were regenerated from the filesystem and `docs/skill-aliases.yml` on 29 Sep 2026; `tests/test_engine_quality.py` fails if they drift from either.
+The engine holds 112 active `SKILL.md` files across 15 category folders under `skills/`. A further folder, `frameworks/`, holds only inactive aliases.
+
+The tables in this README were regenerated from the filesystem and `docs/skill-aliases.yml` on 29 Sep 2026; `tests/test_engine_quality.py` fails if they drift from either.
 
 | Category | Skills |
 |---|---:|
@@ -152,7 +160,9 @@ The engine holds 112 active `SKILL.md` files across 15 category folders under `s
 | `training` | 4 |
 | **Total** | **112** |
 
-The full list of skills is in the two catalogue sections below. The 2026-09-29 consolidation retired 83 skills. Each stays on disk as an inactive `ALIAS.md`, and [docs/skill-aliases.yml](docs/skill-aliases.yml) routes it to the active skill that now holds its content (see [Retired skill routes](#retired-skill-routes)).
+The full list of skills is in the two catalogue sections below.
+
+The 2026-09-29 consolidation retired 83 skills. Each stays on disk as an inactive `ALIAS.md`, and [docs/skill-aliases.yml](docs/skill-aliases.yml) routes it to the active skill that now holds its content (see [Retired skill routes](#retired-skill-routes)).
 
 ## Installation
 
@@ -255,7 +265,12 @@ One exit is not 0 on purpose: `check_source_freshness.py` exits 1 while five qua
 
 ## Quality and improvement
 
-The evidence for the October 2026 Kaizen cycles is in [`docs/kaizen/2026-10-engine-kaizen/`](docs/kaizen/2026-10-engine-kaizen/) (pass 1, 29 October 2026) and [`docs/kaizen/2026-10-engine-kaizen-pass-2/`](docs/kaizen/2026-10-engine-kaizen-pass-2/) (pass 2, 31 October 2026). Each folder holds the same records, with its `logs/` and `tasks/`: scope and evidence, baseline scorecard, backlog, currentness, experiment log, validation record, final report and next-cycle handoff. The [documentation index](docs/README.md) lists the earlier dated records.
+The evidence for the October 2026 Kaizen cycles is in two folders:
+
+- Pass 1, 29 October 2026: [`docs/kaizen/2026-10-engine-kaizen/`](docs/kaizen/2026-10-engine-kaizen/).
+- Pass 2, 31 October 2026: [`docs/kaizen/2026-10-engine-kaizen-pass-2/`](docs/kaizen/2026-10-engine-kaizen-pass-2/).
+
+Each folder holds the same records, with its `logs/` and `tasks/`: scope and evidence, baseline scorecard, backlog, currentness, experiment log, validation record, final report and next-cycle handoff. The [documentation index](docs/README.md) lists the earlier dated records.
 
 Every Kaizen cycle starts from the currentness gate of the Digital Research engine (`digital-research-skills`; some machines still hold it in a folder named `chwezi-research-engine`).
 
@@ -275,7 +290,9 @@ The scores are self-assessed from named measures. No independent re-grade and no
   - `RW-DPP-2021`: Rwanda Law No. 058/2021.
   - `ITU-INTERNET-USAGE`: no skill uses it.
 
-  Do not release a claim that depends on any of them. That includes the Ugandan and Kenyan direct-marketing rows of the [legal and market release gate](docs/quality-gates/legal-market-release-gate.md). The CI workflow runs this check, so that job fails while the gate exits 1. Details: [03-currentness.md](docs/kaizen/2026-10-engine-kaizen-pass-2/03-currentness.md).
+  Do not release a claim that depends on any of them. That includes the Ugandan and Kenyan direct-marketing rows of the [legal and market release gate](docs/quality-gates/legal-market-release-gate.md).
+
+  The CI workflow runs this check, so that job fails while the gate exits 1. Details: [03-currentness.md](docs/kaizen/2026-10-engine-kaizen-pass-2/03-currentness.md).
 - **Registered legal statuses are narrow.** `UG-DPPA-2019`, `UG-UCC-ADS-2019`, `TZ-PDPA` and `TZ-PDPR-2023` are `partial`. They record what was read, not that a campaign or post complies. Amendments to the Ugandan Act after December 2023 and any UCC revision were not searched.
 - **Platform specification values are unread.** The platform-specification gate in `validate_media_plan_provenance.py` proves the state of a register record, not the value a platform page shows. Open the live page at each build date.
 - **Routing is lexical and thinly covered.** At the pass 2 close, 9 of 112 skills had three positive and two owned-negative fixtures. The target is 56.
@@ -283,7 +300,9 @@ The scores are self-assessed from named measures. No independent re-grade and no
 
 ### Date-triggered gates
 
-`check_source_freshness.py` fails from the day after a record's `next_review`. As of 2026-10-31 it already fails because of the five quarantines above. If no record is re-verified, further records become overdue on the dates below. The counts are records that are overdue and not quarantined, measured with `--as-of`.
+`check_source_freshness.py` fails from the day after a record's `next_review`. As of 2026-10-31 it already fails because of the five quarantines above.
+
+If no record is re-verified, further records become overdue on the dates below. The counts are records that are overdue and not quarantined, measured with `--as-of`.
 
 | Run with `--as-of` | Overdue, not quarantined (cumulative) | Newly overdue since the row above |
 |---|---:|---|
@@ -296,15 +315,26 @@ The scores are self-assessed from named measures. No independent re-grade and no
 | 2027-03-30 | 149 | 54 records due 2027-03-23 to 2027-03-29, 44 of them on 2027-03-29 |
 | 2027-09-30 | 174 | The last 25 records (due 2027-09-29); every record that is not quarantined is now overdue |
 
-`validate_media_plan_provenance.py` fails the same way for any plan that cites an overdue register record. The pass 2 sample plan fails with `--as-of 2027-01-01` because `META-AD-STANDARDS` is overdue by then. The test suite pins its dates and is not date-triggered. The proposed next audit is 2026-11-30, or earlier once the five quarantined records are read.
+`validate_media_plan_provenance.py` fails the same way for any plan that cites an overdue register record. The pass 2 sample plan fails with `--as-of 2027-01-01` because `META-AD-STANDARDS` is overdue by then.
+
+The test suite pins its dates and is not date-triggered. The proposed next audit is 2026-11-30, or earlier once the five quarantined records are read.
 
 ## What the October 2026 kaizen improved
 
-Two Kaizen cycles ran on this engine: pass 1 on 29 October and pass 2 on 31 October 2026. A documentation wave followed. Every commit named below is on `main` and was checked with `git show --stat`. Neither cycle reverted a kept change. The items rest on commands and counts, not on the self-assessed scores.
+Two Kaizen cycles ran on this engine: pass 1 on 29 October and pass 2 on 31 October 2026. A documentation wave followed.
+
+Every commit named below is on `main` and was checked with `git show --stat`. Neither cycle reverted a kept change. The items rest on commands and counts, not on the self-assessed scores.
 
 What did not change: the source-freshness gate exits 1 before and after both cycles, the 95/100 target was not reached, and no paid or behavioural model run took place.
 
-The sources are the pass 1 [final report](docs/kaizen/2026-10-engine-kaizen/05-final-report.md) and [experiment log](docs/kaizen/2026-10-engine-kaizen/03-experiment-log.md), and the pass 2 [final report](docs/kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md), [backlog](docs/kaizen/2026-10-engine-kaizen-pass-2/02-improvement-backlog.md), [experiment log](docs/kaizen/2026-10-engine-kaizen-pass-2/03-experiment-log.md) and [validation record](docs/kaizen/2026-10-engine-kaizen-pass-2/04-validation-record.md). The unabridged text of this section is in [the detail record](docs/kaizen/2026-10-readme-kaizen/october-2026-kaizen-detail.md).
+This section is a summary. The unabridged text is in [the detail record](docs/kaizen/2026-10-readme-kaizen/october-2026-kaizen-detail.md). The evidence behind it:
+
+- [Pass 1 final report](docs/kaizen/2026-10-engine-kaizen/05-final-report.md)
+- [Pass 1 experiment log](docs/kaizen/2026-10-engine-kaizen/03-experiment-log.md)
+- [Pass 2 final report](docs/kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md)
+- [Pass 2 backlog](docs/kaizen/2026-10-engine-kaizen-pass-2/02-improvement-backlog.md)
+- [Pass 2 experiment log](docs/kaizen/2026-10-engine-kaizen-pass-2/03-experiment-log.md)
+- [Pass 2 validation record](docs/kaizen/2026-10-engine-kaizen-pass-2/04-validation-record.md)
 
 ### Measured before and after
 
@@ -325,40 +355,44 @@ The sources are the pass 1 [final report](docs/kaizen/2026-10-engine-kaizen/05-f
 1. The pass 2 baseline was lower than the pass 1 close because three dimensions lost a point for defects that were newly measured.
 2. The 5 lines were 4 in `AGENTS.md` and 1 in the skill-writing skill. The step to 3 was `ecef6e1`. The step to 0 was the documentation wave (`830f154`).
 
+## The 17 changes, by type
+
+Each item names its commit and the pass that made it. The unabridged wording is in [the detail record](docs/kaizen/2026-10-readme-kaizen/october-2026-kaizen-detail.md).
+
 ### Correctness and safety fixes, most serious first
 
-1. **The source gate passed quarantined sources** (`a80bc2e`, pass 1). The first quarantine code (`3664c85`) blocked a quarantined record only when it was also overdue. Independent review found this. Every `quarantined: true` record now blocks, and a regression test covers it. On a scratch register (ten quarantined records, review dates set to 2027-12-31, `--as-of 2026-10-29`) the checker from `a80bc2e^` exited 0 and the one from `a80bc2e` exited 1. The scratch register was not committed.
-2. **The outreach checklist overstated a statute** (`d5c8a4c`, pass 2). It said that processing personal data without prior consent (s.7, Uganda Data Protection and Privacy Act 2019) "is an offence". The Act text, read on 2026-10-31 from the ULII PDF, states the consent rule at s.7 with no penalty. The offences are ss.35 to 37, and complaints go to the Authority under ss.31 to 33. The sentence is corrected, and `tests/test_legal_claim_guard.py` (4 tests) guards that one claim. Act amendments after December 2023 were not read.
-3. **A symlinked `.claude-plugin` directory could resolve manifest files outside the checkout** (`15e73a8`, pass 1). The package check now refuses it before reading. An escape-path regression test covers it, and the 11 tests in `tests/test_package_integrity.py` pass.
-4. **A malformed quarantine flag was treated as absent** (`b42b6ea`, pass 1). A non-boolean `quarantined` value now fails closed. `test_malformed_quarantine_flag_fails_closed` covers it.
-5. **Nothing stopped a quarantine being cleared without evidence** (`5aed7e2`, pass 2). A release now needs a `scope`, a `release_basis`, a `partial` or `verified` status and a `verified_on` date equal to the release date. Three of the four new tests failed before the change. All 11 in `tests/test_source_freshness_negative.py` pass now ([log](docs/kaizen/2026-10-engine-kaizen-pass-2/logs/test-released-quarantine.txt)).
-6. **The media-planning workflow numbered two steps "6."** (`a4ef219`, pass 1). Steps now run 1 to 10, and a regression test in `tests/test_media_plan_provenance.py` covers it.
+1. **The source gate passed quarantined sources** (`a80bc2e`, pass 1). Quarantine code `3664c85` blocked a record only if it was also overdue. Every `quarantined: true` record now blocks. A scratch-register check exited 0 before the fix and 1 after.
+2. **The outreach checklist overstated a statute** (`d5c8a4c`, pass 2). It said that processing personal data without prior consent (s.7, Uganda Data Protection and Privacy Act 2019) "is an offence". The Act states the consent rule at s.7 with no penalty; offences are in ss.35 to 37. `tests/test_legal_claim_guard.py` guards the corrected sentence.
+3. **A symlinked `.claude-plugin` directory could resolve manifest files outside the checkout** (`15e73a8`, pass 1). The package check now refuses it before reading. An escape-path regression test covers it.
+4. **A malformed quarantine flag was treated as absent** (`b42b6ea`, pass 1). A non-boolean `quarantined` value now fails closed (`test_malformed_quarantine_flag_fails_closed`).
+5. **Nothing stopped a quarantine being cleared without evidence** (`5aed7e2`, pass 2). A release now needs a `scope`, a `release_basis`, a `partial` or `verified` status and a `verified_on` date equal to the release date. Three of the four new tests failed first ([log](docs/kaizen/2026-10-engine-kaizen-pass-2/logs/test-released-quarantine.txt)).
+6. **The media-planning workflow numbered two steps "6."** (`a4ef219`, pass 1). Steps now run 1 to 10, with a regression test.
 
 ### Source currentness
 
-7. **23 overdue records blocked the gate without separating reviewed from unreviewed ones** (`3664c85` with `40d6cd7`, pass 1). Thirteen were re-scoped after the official page was opened, each `partial` with a stated narrow scope. The other 10 were quarantined as `NOT_ASSESSED` instead of having their dates moved. A quarantine is a block, not clearance. Detail: [pass 1 currentness record](docs/kaizen/2026-10-engine-kaizen/03-currentness.md).
-8. **Primary text was read for records that pass 1 could not open** (`b6dc4e0`, pass 2). Five quarantines were released after the text was read (`UG-DPPA-2019`, `UG-UCC-ADS-2019`, `TZ-PDPA`, `TZ-PDPR-2023`, `META-AD-STANDARDS`). One record was re-checked (`UG-FACEBOOK-ACCESS-2026`), and three dead or mismatched URLs were corrected. Findings fell from 11 to 5. Every release is `partial` with a recorded scope, and the Meta record supports page structure only. The commit subject says "six sources"; the correct count is five released and one re-checked. Sites that blocked automated access (ULII HTML pages, ITU DataHub, Kenya Law) were not worked around. Detail: [pass 2 currentness record](docs/kaizen/2026-10-engine-kaizen-pass-2/03-currentness.md).
+7. **23 overdue records blocked the gate without separating reviewed from unreviewed ones** (`3664c85` with `40d6cd7`, pass 1). Thirteen were re-scoped as `partial` after the official page was opened. Ten were quarantined as `NOT_ASSESSED`. A quarantine is a block, not clearance. [Detail](docs/kaizen/2026-10-engine-kaizen/03-currentness.md).
+8. **Primary text was read for records that pass 1 could not open** (`b6dc4e0`, pass 2). Five quarantines were released as `partial` with a recorded scope, one record was re-checked and three bad URLs were corrected. Findings fell from 11 to 5. The commit subject says "six sources"; five were released and one re-checked. Sites that blocked automated access were not worked around. [Detail](docs/kaizen/2026-10-engine-kaizen-pass-2/03-currentness.md).
 
 ### Gaps filled in skills and references
 
-9. **The README cited the UCC Advertising Standards 2019 but no skill carried a check** (`a86f456`, pass 2). The new reference `skills/content-writing/references/uganda-advertising-standards-check.md` is linked from the direct-marketing ethics filter, the influencer term-sheet reference and the legal and market release gate. It records that no clause names the internet, social media or influencers, so application to social posts is `NOT_ASSESSED`. The evidence log reports 16 of 16 quoted phrases found in the extracted primary text and seven digital-media search terms found 0 times ([log](docs/kaizen/2026-10-engine-kaizen-pass-2/logs/clause-screen-text-checks.txt)). That check was not re-run, because the extracted text is kept outside the repository.
-10. **The crisis playbook had no route for a service outage with a possible data question, and no skill held the Act's s.23 notification duty** (`14ab9be`, pass 2). The new reference `skills/playbooks/playbook-crisis-communications/references/service-outage-and-data-incident-communications.md` (74 lines) adds a decision row to the skill. It states s.23(1) to (5) from primary text and bars refund or compensation wording that the contract or client policy does not supply. `validate_skill_engine.py` still reports 112 of 112 compliant.
-11. **The social anti-slop overlay identifiers (ME1 to ME7, AS1 to AS7) sat only in a child reference, where the shared identifier scan missed them** (`ecc151a`, pass 1). They are now exposed at the entry skill, and `tests/test_anti_slop_overlay.py` guards the crosswalk. This proves the checks can be found, not that a model applies them.
+9. **The README cited the UCC Advertising Standards 2019 but no skill carried a check** (`a86f456`, pass 2). The new reference `skills/content-writing/references/uganda-advertising-standards-check.md` records that no clause names social media or influencers, so application to social posts is `NOT_ASSESSED`. Not re-run here: the extracted text is outside the repository ([log](docs/kaizen/2026-10-engine-kaizen-pass-2/logs/clause-screen-text-checks.txt)).
+10. **The crisis playbook had no route for a service outage with a possible data question** (`14ab9be`, pass 2). The new reference `skills/playbooks/playbook-crisis-communications/references/service-outage-and-data-incident-communications.md` states the Act's s.23(1) to (5) notification duty from primary text. It bars refund wording that the contract does not supply.
+11. **The overlay identifiers (ME1 to ME7, AS1 to AS7) sat only in a child reference that the identifier scan missed** (`ecc151a`, pass 1). They are now exposed at the entry skill, and `tests/test_anti_slop_overlay.py` guards the crosswalk. This proves the checks can be found, not that a model applies them.
 
 ### New checks and tests
 
-12. **No size or identity check on the package** (`177e2a0`, pass 1). `scripts/check_package_integrity.py` enforces a hard 5,000-entry ceiling on the full checkout and the package tree. It fails closed on an incomplete walk and checks the plugin name, version and path set. CI runs it. Both counts are far below the limit.
-13. **Media-plan numbers could appear without an origin** (`5a2f371`, pass 1). `scripts/validate_media_plan_provenance.py` requires an origin (`observed`, `client_input` or `synthetic_assumption`) and a source for every numeric input. The plan example now carries them. Six tests at that commit (seven after `a4ef219`) cover the refusal paths. Figures remain synthetic assumptions, not forecasts.
-14. **Platform specifications had no source-state check** (`5b46d84`, pass 2). Optional `platform_specs` entries are refused as `verified` when their register record is quarantined, overdue, absent or not verified. Ten of the 11 new tests errored before the change, and `tests/test_media_plan_provenance.py` now passes 18 of 18. The honest sample plan exits 0, the negative control exits 1 with two findings, and the same sample with `--as-of 2027-01-01` exits 1 because `META-AD-STANDARDS` is overdue by then. The gate proves the state of a register record, not the value on a platform page.
-15. **No check for host-specific paths** (`ecef6e1`, pass 2). `scripts/check_machine_paths.py` and 5 tests (all pass) fail on a host path in active content. The live checkout failed before the fix and passed after. Two engine-local paths were removed.
+12. **No size or identity check on the package** (`177e2a0`, pass 1). `scripts/check_package_integrity.py` enforces a 5,000-entry ceiling on the checkout and the package tree. It fails closed on an incomplete walk and checks the plugin name, version and path set. CI runs it.
+13. **Media-plan numbers could appear without an origin** (`5a2f371`, pass 1). `scripts/validate_media_plan_provenance.py` requires an origin (`observed`, `client_input` or `synthetic_assumption`) and a source for every numeric input. Figures stay synthetic assumptions, not forecasts.
+14. **Platform specifications had no source-state check** (`5b46d84`, pass 2). `platform_specs` entries are refused as `verified` when their register record is quarantined, overdue, absent or not verified. `tests/test_media_plan_provenance.py` passes 18 of 18. The gate proves a record's state, not the value on a platform page.
+15. **No check for host-specific paths** (`ecef6e1`, pass 2). `scripts/check_machine_paths.py` and 5 tests fail on a host path in active content. The checkout failed before the fix and passed after.
 
 ### Routing
 
-16. **Fixture coverage was thin and tied to few skills** (`f2fd463`, pass 1; `14ab9be` and `7940e14`, pass 2). Fixtures rose from 392 to 400, owned negatives from 121 to 125, and skills meeting the three-positive, two-negative rule from 4 to 9 of 112. Precision at 1 stayed at 95.2%. In pass 2 the first owned negative for outreach failed because its prompt was ambiguous, so the prompt was replaced rather than the router tuned. All figures are lexical, and 9 of 112 is far from the target of 56.
+16. **Fixture coverage was thin and tied to few skills** (`f2fd463`, pass 1; `14ab9be` and `7940e14`, pass 2). Fixtures rose from 392 to 400 and owned negatives from 121 to 125. Skills with three positives and two owned negatives rose from 4 to 9 of 112; the target is 56. Precision at 1 stayed at 95.2%. All figures are lexical.
 
 ### Documentation and portability
 
-17. **Commands and results were Windows-only or missing** (`2abddc7`, `797a0ed`, `948d043`, `57067dd`, `3075062`, `830f154`, `5bfa956`, `6813015`, `b50403e`, documentation wave). The README listed five checks as backslash PowerShell commands with no results. It now lists thirteen commands with measured results, written for Linux. `AGENTS.md` and `rules/common/core.md` use the name `digital-research-skills`, and three router sentences no longer name workstation paths. [`docs/README.md`](docs/README.md) separates controlling documents from dated records, and [`CHANGELOG.md`](CHANGELOG.md) records the history with corrected counts. The commands ran on Fedora 44 (Python 3.14, Node 22); exit codes are in [Validation](#validation). Not run: `install.ps1` and a non-dry-run `install.sh`. Follow-ups: [07-docs-followups.md](docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md).
+17. **Commands and results were Windows-only or missing** (`2abddc7`, `797a0ed`, `948d043`, `57067dd`, `3075062`, `830f154`, `5bfa956`, `6813015`, `b50403e`, documentation wave). The README listed five checks as backslash PowerShell commands with no results. It now lists thirteen commands with measured results, written for Linux. `AGENTS.md` and `rules/common/core.md` use the name `digital-research-skills`. Not run: `install.ps1` and a non-dry-run `install.sh`. [Follow-ups](docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md).
 
 ## Skill catalogue: strategy, advertising and measurement
 
@@ -578,10 +612,14 @@ Never run an `ALIAS.md`. Use the active owner below; the retired skill's unique 
 
 ## Sources and references
 
-The engine cites 197 books, 5 repositories, 81 standards and official sources, 122 further source-register sources and 22 websites and articles. The lists are citations only: no book content is stored in this repository. Read them in [docs/references.md](docs/references.md). The register at `docs/source-registers/source-register.json` holds the sources that decide legal, platform and market claims.
+The engine cites 197 books, 5 repositories, 81 standards and official sources, 122 further source-register sources and 22 websites and articles.
+
+The lists are citations only: no book content is stored in this repository. Read them in [docs/references.md](docs/references.md). The register at `docs/source-registers/source-register.json` holds the sources that decide legal, platform and market claims.
 
 ## Contributing, author and licence
 
-Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before you change a skill. It lists the checks to run. New skills follow the [authoring standard](docs/standards/skill-authoring-standard.md) and the [skill template](docs/templates/SKILL.template.md). The documentation index is [docs/README.md](docs/README.md).
+Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before you change a skill. It lists the checks to run.
+
+New skills follow the [authoring standard](docs/standards/skill-authoring-standard.md) and the [skill template](docs/templates/SKILL.template.md). The documentation index is [docs/README.md](docs/README.md), and the history is in [`CHANGELOG.md`](CHANGELOG.md).
 
 The engine is by Peter Bamuhigire of Chwezi Core Systems. It is released under the MIT licence in [`LICENSE`](LICENSE).
