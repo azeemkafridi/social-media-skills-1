@@ -14,6 +14,7 @@ This index separates the documents that control the engine today from dated reco
 | [`evidence-packs/measurement-proof-pack.md`](evidence-packs/measurement-proof-pack.md) | Defining, reconciling and tracing metrics in reports and ROI work |
 | [`world-class-exemplars/campaign-exemplars.md`](world-class-exemplars/campaign-exemplars.md) | A quality model for campaigns, never client evidence |
 | [`ai-prompting/domain-prompt-compilation-contract.md`](ai-prompting/domain-prompt-compilation-contract.md) | Ready-to-paste prompt handoffs |
+| [`references.md`](references.md) | Full lists of books, repositories, standards, source-register sources and websites that the engine cites (the README holds a summary) |
 | [`ux-foundations.md`](ux-foundations.md) | Summary index of the numbered UX sections that skills cite |
 | [`control-plane-adoption.md`](control-plane-adoption.md), [`approval-enforcement.md`](approval-enforcement.md) and [`approval-adapter.json`](approval-adapter.json) | How the engine meets the shared coordination and approval contracts |
 | [`plans/2026-04-14-world-class-consultancy-engine/00-roadmap-index.md`](plans/2026-04-14-world-class-consultancy-engine/00-roadmap-index.md) and [`plans/NEXT_FEATURES.md`](plans/NEXT_FEATURES.md) | The controlling roadmap and the feature backlog |
