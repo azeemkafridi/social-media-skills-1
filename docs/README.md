@@ -23,6 +23,7 @@ This index separates the documents that control the engine today from dated reco
 
 | Record | Date | What it holds |
 |---|---|---|
+| [`kaizen/2026-10-readme-kaizen/`](kaizen/2026-10-readme-kaizen/) | 2026-10-31 | README kaizen: the [record](kaizen/2026-10-readme-kaizen/readme-kaizen-record.md) of the restructure, and the [full text](kaizen/2026-10-readme-kaizen/october-2026-kaizen-detail.md) of the October kaizen summary that the README now abridges |
 | [`kaizen/2026-10-engine-kaizen-pass-2/`](kaizen/2026-10-engine-kaizen-pass-2/) | 2026-10-31 | Pass 2: baseline, backlog, currentness, experiments, validation, [final report](kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md) and [next-cycle handoff](kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md) |
 | [`kaizen/2026-10-engine-kaizen/`](kaizen/2026-10-engine-kaizen/) | 2026-10-29 | Pass 1, with the same eight records |
 | [`kaizen/consolidation-2026-09-29/`](kaizen/consolidation-2026-09-29/) | 2026-09-29 | The consolidation from 191 to 112 active skills: decisions, merge runbook, execution log, scorecard |

@@ -37,6 +37,16 @@ The pass 2 commits were made on branch `kaizen/2026-10-pass2` and are on `main`.
 
 Follow-ups that need a skill or script change are in [`07-docs-followups.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md).
 
+### README kaizen
+
+A scoped pass over `README.md` ran on branch `kaizen/2026-10-readme-kaizen`. As of this entry it is not merged to `main`. It publishes no score. The record is [`readme-kaizen-record.md`](docs/kaizen/2026-10-readme-kaizen/readme-kaizen-record.md).
+
+- `9bc7877` moves the References section (about 6,000 words) to [`docs/references.md`](docs/references.md).
+- `ca3bfe2` adds an at-a-glance list, a three-step Start here, a contents list, a task-to-skill table and a how-it-works section, and splits the 112-row catalogue into two sections.
+- `7a4fcf3`, `1205342` and `ee4341d` rewrite the install, validation, quality and kaizen text as short sentences and bullets.
+- `2ede77a` moves the unabridged kaizen text to [`october-2026-kaizen-detail.md`](docs/kaizen/2026-10-readme-kaizen/october-2026-kaizen-detail.md).
+- Result: 11,393 to 5,732 words, longest section 6,019 to 833 words, reading ease 31 to 58. Validator exit codes are unchanged, and `check_source_freshness.py` still exits 1 because of five quarantined records.
+
 ## 2026-10-29: Kaizen pass 1
 
 Branch `kaizen/2026-10`. Raw and published score 58.5, unchanged from the baseline ([final report](docs/kaizen/2026-10-engine-kaizen/05-final-report.md)).
