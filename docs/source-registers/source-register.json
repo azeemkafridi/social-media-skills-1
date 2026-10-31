@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-09-29",
+  "as_of": "2026-10-31",
   "records": [
     {
       "id": "GOOGLE-AI-SEARCH-GUIDE-2026",
@@ -236,21 +236,27 @@
       "publisher": "Uganda Legal Information Institute",
       "tier": 1,
       "url": "https://ulii.org/en/akn/ug/act/2019/9/eng%402019-05-03",
-      "verified_on": "2026-07-13",
+      "verified_on": "2026-10-31",
       "review_every_days": 90,
-      "next_review": "2026-10-11",
+      "next_review": "2027-01-29",
       "use_for": [
         "personal-data collection",
         "audience lists",
         "analytics",
         "direct marketing"
       ],
-      "verification_note": "Official legal database; check the latest-version notice and amendments before release.",
-      "quarantined": true,
+      "verification_note": "Text read from the ULII PDF (https://media.ulii.org/media/legislation/18002/source_file/98f959926ba2429c/2019-9.pdf). Section numbers are unchanged in the Cap. 97 edition. s.7 has no penalty; offences are ss.35 to 37. Check the Authority for amendments and current PDPO guidance before release.",
       "quarantined_on": "2026-10-29",
-      "support_status": "NOT_ASSESSED",
-      "quarantine_reason": "Official ULII page returned HTTP 403 in direct open; current consolidated state after 2023 was not independently checked through the current gazette. Do not rely on this record for current legal conclusions.",
-      "support_reviewed_on": "2026-10-29"
+      "support_status": "partial",
+      "support_reviewed_on": "2026-10-31",
+      "quarantined": false,
+      "quarantine_released_on": "2026-10-31",
+      "release_basis": "Opened and read the ULII-published PDF of the Act (Chapter 97, Act 9 of 2019, PDF created 12 August 2026) on 2026-10-31; claim text for ss.7, 8, 19, 23, 26 and 35 to 37 compared with the engine wording.",
+      "accessed_on": "2026-10-31",
+      "freshness_class": "context-bound",
+      "scope": "Sections 7, 8, 19, 23, 26 and 35 to 37 and the section list of the Act as printed in the ULII Cap. 97 collection PDF (legislation as at 3 May 2019). Use for the consent rule, children, transfers outside Uganda, breach notification to the Authority, the direct-marketing objection right and the offence provisions only.",
+      "uncertainty": "The PDF states the collection was last checked for updates on 31 December 2023 and that updates may exist. The ULII HTML point-in-time pages return HTTP 403 to automated access, so the latest-version notice was not read. A search on 2026-10-31 found no 2026 amendment to the Act in secondary sources; a draft digital media law reported in April 2026 is said to touch it (draft, not read). Amendment status after 2023 is NOT_ASSESSED.",
+      "publication_date": "2019-05-03"
     },
     {
       "id": "UG-DPPR-2021",
@@ -272,8 +278,8 @@
       "quarantined": true,
       "quarantined_on": "2026-10-29",
       "support_status": "NOT_ASSESSED",
-      "quarantine_reason": "Official ULII page returned HTTP 403 in direct open; no current official gazette amendment search completed. Do not rely on this record for current legal conclusions.",
-      "support_reviewed_on": "2026-10-29"
+      "quarantine_reason": "Official ULII page returned HTTP 403 in direct open; no current official gazette amendment search completed. Do not rely on this record for current legal conclusions. Re-attempted 2026-10-31: ULII HTML and source URLs still return HTTP 403 to automated access, and no ULII media PDF for the Regulations was found; only secondary sources describe them (S.I. 21 of 2021).",
+      "support_reviewed_on": "2026-10-31"
     },
     {
       "id": "UG-PDPO-ORG",
@@ -301,21 +307,26 @@
       "publisher": "Uganda Communications Commission",
       "tier": 1,
       "url": "https://www.ucc.co.ug/download/the-advertising-standards/",
-      "verified_on": "2026-07-13",
+      "verified_on": "2026-10-31",
       "review_every_days": 90,
-      "next_review": "2026-10-11",
+      "next_review": "2027-01-29",
       "use_for": [
         "advertising claims",
         "minors",
         "regulated categories",
         "broadcast and digital creative"
       ],
-      "verification_note": "Confirm sector-specific rules and approvals in addition to the general standard.",
-      "quarantined": true,
+      "verification_note": "Standard text read at https://www.ucc.co.ug/wp-content/uploads/2023/10/Advertising-standard-2019-Final.pdf (linked from the register URL). Annex 5 is worded for broadcast. Sector annexes (alcohol, gambling, financial products, health, charities, children) need their own check.",
       "quarantined_on": "2026-10-29",
-      "support_status": "NOT_ASSESSED",
-      "quarantine_reason": "Official UCC index identifies the 2019 standard, but no complete current amendment/supersession review was completed. Keep claims tied to this standard quarantined pending full regulator-source review.",
-      "support_reviewed_on": "2026-10-29"
+      "support_status": "partial",
+      "support_reviewed_on": "2026-10-31",
+      "quarantined": false,
+      "quarantine_released_on": "2026-10-31",
+      "release_basis": "Opened the UCC-hosted PDF and extracted its text on 2026-10-31 (3,303 lines); clause numbers checked against the engine reference. A UCC ruling of January 2026 reported by Daily Monitor (28 January 2026) relied on the Advertising Standards 2019 (Annex 7), which supports that the standard is still applied.",
+      "accessed_on": "2026-10-31",
+      "freshness_class": "context-bound",
+      "scope": "Text of the Advertising Standards 2019 as hosted by UCC (PDF; download page dated 31 October 2023): Preamble, Part 3 interpretation, Part 6 clause 10 testimonials, Annex 4 clauses 6, 7, 43 and 44, Annex 5 recognition of advertising, Annex 7 split-screen. No clause names the internet, social media or influencers. Use as a screening reference, not as a statement of how UCC applies it to digital posts.",
+      "uncertainty": "No amended or superseding edition is linked from the UCC page, but absence of an amendment is not proven: UCC gazette notices were not searched. The standard says it is reviewed and amended from time to time. Application to social media and influencer content is an inference, not stated in the text."
     },
     {
       "id": "UG-COPYRIGHT-2026",
@@ -339,8 +350,8 @@
       "quarantined": true,
       "quarantined_on": "2026-10-29",
       "support_status": "NOT_ASSESSED",
-      "quarantine_reason": "ULII indexed the May 2026 amendment, but direct source open was blocked and current consolidated legal status was not independently confirmed. Do not use as current legal advice.",
-      "support_reviewed_on": "2026-10-29"
+      "quarantine_reason": "ULII indexed the May 2026 amendment, but direct source open was blocked and current consolidated legal status was not independently confirmed. Do not use as current legal advice. Re-attempted 2026-10-31: ULII HTML and source URLs still return HTTP 403 to automated access; no alternative official route to the amendment text was found.",
+      "support_reviewed_on": "2026-10-31"
     },
     {
       "id": "KE-DP-GENERAL-2021",
@@ -363,8 +374,8 @@
       "quarantined": true,
       "quarantined_on": "2026-10-29",
       "support_status": "NOT_ASSESSED",
-      "quarantine_reason": "Official ODPC-hosted 2021 regulation document was opened during research, but current amendment or status review was not completed. Quarantined pending current legal review; do not use for current legal conclusions.",
-      "support_reviewed_on": "2026-10-29"
+      "quarantine_reason": "Official ODPC-hosted 2021 regulation document was opened during research, but current amendment or status review was not completed. Quarantined pending current legal review; do not use for current legal conclusions. Re-attempted 2026-10-31: the registered ODPC PDF URL returns HTTP 404, the ODPC home page shows a maintenance notice, and the Kenya Law URL returned an empty challenge response; the register URL is dead and the correct one is not yet found.",
+      "support_reviewed_on": "2026-10-31"
     },
     {
       "id": "RW-DPP-2021",
@@ -386,53 +397,65 @@
       "quarantined": true,
       "quarantined_on": "2026-10-29",
       "support_status": "NOT_ASSESSED",
-      "quarantine_reason": "Official Rwanda DPO page was opened and partially inspected, but current amendment and implementing-guidance review was not completed. Quarantined pending current legal review; do not use for current legal conclusions.",
-      "support_reviewed_on": "2026-10-29"
+      "quarantine_reason": "Official Rwanda DPO page was opened and partially inspected, but current amendment and implementing-guidance review was not completed. Quarantined pending current legal review; do not use for current legal conclusions. Re-attempted 2026-10-31: the official page https://dpo.gov.rw/dpp-law/general-provisions was opened: it shows Chapter V (Articles 29 to 36, registration) and the Article 3 consent definition but no law number, gazette date or amendment notice, and the articles themselves were not read.",
+      "support_reviewed_on": "2026-10-31"
     },
     {
       "id": "TZ-PDPA",
       "domain": "legal",
       "jurisdiction": "Tanzania",
-      "title": "Personal Data Protection Act",
+      "title": "Personal Data Protection Act, 2022 (Cap. 44), English version GN 395B",
       "publisher": "Personal Data Protection Commission Tanzania",
       "tier": 1,
-      "url": "https://www.pdpc.go.tz/en/policies-legislations/acts/",
-      "verified_on": "2026-07-13",
+      "url": "https://pdpc.go.tz/the-personal-data-protection-act-2022/",
+      "verified_on": "2026-10-31",
       "review_every_days": 90,
-      "next_review": "2026-10-11",
+      "next_review": "2027-01-29",
       "use_for": [
         "personal-data processing",
         "Tanzania campaigns"
       ],
-      "verification_note": "Confirm territorial application, current notices and controller/processor registration with Tanzanian counsel or the PDPC.",
-      "quarantined": true,
+      "verification_note": "Official site is pdpc.go.tz (www.pdpc.go.tz fails certificate validation). Use with the Collection and Processing Regulations 2023 and PDPC registration guidance.",
       "quarantined_on": "2026-10-29",
-      "support_status": "NOT_ASSESSED",
-      "quarantine_reason": "The Tanzanian PDPC Acts index timed out on direct access; current Act version and scope remain NOT_ASSESSED.",
-      "support_reviewed_on": "2026-10-29"
+      "support_status": "partial",
+      "support_reviewed_on": "2026-10-31",
+      "quarantined": false,
+      "quarantine_released_on": "2026-10-31",
+      "release_basis": "Downloaded and extracted the PDPC-hosted PDF of the English version on 2026-10-31; ss.14, 16 and 35 and the arrangement of sections read.",
+      "accessed_on": "2026-10-31",
+      "freshness_class": "context-bound",
+      "scope": "Sections 14 (registration before collecting or processing), 16 (five-year registration period) and 35 (right to prevent processing for direct marketing) of the Personal Data Protection Act, Cap. 44, English version published as GN 395B on 13 June 2023.",
+      "uncertainty": "Amendments after June 2023, commencement and enforcement dates, fees and the registration portal procedure were not read. The PDPC page shows only a web publication date of 23 March 2026. Not legal advice.",
+      "publication_date": "2023-06-13"
     },
     {
       "id": "TZ-PDPR-2023",
       "domain": "legal",
       "jurisdiction": "Tanzania",
-      "title": "Personal Data Protection regulations, 2023",
+      "title": "Personal Data Protection (Personal Data Collection and Processing) Regulations, 2023 (GN 449C)",
       "publisher": "Personal Data Protection Commission Tanzania",
       "tier": 1,
-      "url": "https://www.pdpc.go.tz/en/policies-legislations/regulations/",
-      "verified_on": "2026-07-13",
+      "url": "https://pdpc.go.tz/publications/the-personal-data-protection-personal-data-collection-and-processing-regulations-2023/",
+      "verified_on": "2026-10-31",
       "review_every_days": 90,
-      "next_review": "2026-10-11",
+      "next_review": "2027-01-29",
       "use_for": [
         "collection and processing",
         "complaints",
         "Tanzania campaigns"
       ],
-      "verification_note": "Read the collection-and-processing regulations, not only the complaints procedure.",
-      "quarantined": true,
+      "verification_note": "Official site is pdpc.go.tz. Complaints Settlement Procedures Regulations 2023 are a separate instrument listed on the same site and were not read.",
       "quarantined_on": "2026-10-29",
-      "support_status": "NOT_ASSESSED",
-      "quarantine_reason": "The Tanzanian PDPC Regulations index returned a gateway error on direct access; current regulation text remains NOT_ASSESSED.",
-      "support_reviewed_on": "2026-10-29"
+      "support_status": "partial",
+      "support_reviewed_on": "2026-10-31",
+      "quarantined": false,
+      "quarantine_released_on": "2026-10-31",
+      "release_basis": "Downloaded and extracted the PDPC-hosted PDF on 2026-10-31 and searched the text; arrangement of regulations read.",
+      "accessed_on": "2026-10-31",
+      "freshness_class": "context-bound",
+      "scope": "Identity and text of the Personal Data Protection (Personal Data Collection and Processing) Regulations, 2023 (GN 449C, published 4 July 2023, English version): the instrument exists, its title and gazette number, and that its text contains no direct-marketing procedure (no occurrence of \"marketing\" or \"opt-out\" in the extracted text).",
+      "uncertainty": "Substantive registration and collection rules were not read in full; amendments after July 2023 were not checked. Act s.35 refers to procedures prescribed in regulations, but the direct-marketing procedure was not found in this instrument and may sit elsewhere (NOT_ASSESSED).",
+      "publication_date": "2023-07-04"
     },
     {
       "id": "META-AD-STANDARDS",
@@ -441,10 +464,10 @@
       "title": "Meta Advertising Standards",
       "publisher": "Meta",
       "tier": 1,
-      "url": "https://www.facebook.com/policies/ads/",
-      "verified_on": "2026-09-19",
+      "url": "https://transparency.meta.com/policies/ad-standards/",
+      "verified_on": "2026-10-31",
       "review_every_days": 30,
-      "next_review": "2026-10-19",
+      "next_review": "2026-11-30",
       "use_for": [
         "Facebook ads",
         "Instagram ads",
@@ -452,12 +475,17 @@
         "targeting",
         "landing pages"
       ],
-      "verification_note": "Direct HTTPS retrieval returned 200 on 2026-09-19. Treat the policy categories and destination requirements as volatile; check the relevant category and destination at each paid-media release. Browser access may require an authenticated Meta session.",
-      "quarantined": true,
+      "verification_note": "The old facebook.com/policies/ads URL now redirects to the Meta Transparency Centre. Treat every rule as volatile; this record supports only the policy structure.",
       "quarantined_on": "2026-10-29",
-      "support_status": "NOT_ASSESSED",
-      "quarantine_reason": "The official Meta policy URL redirected to login/temporary block. Current policy content and exact paid-ad restrictions remain NOT_ASSESSED.",
-      "support_reviewed_on": "2026-10-29"
+      "support_status": "partial",
+      "support_reviewed_on": "2026-10-31",
+      "quarantined": false,
+      "quarantine_released_on": "2026-10-31",
+      "release_basis": "Opened https://transparency.meta.com/policies/ad-standards/ (reached by redirect from the facebook.com policy URL) on 2026-10-31 and read the headings.",
+      "accessed_on": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "scope": "Structure of the Meta Advertising Standards page: twelve top-level headings (including Prohibited Commercial Practices, Restricted goods and services, Privacy Violations and Personal Attributes, Social issue, electoral or political advertising, Data use restrictions) and the statement that policies may change without notice. No individual policy rule was read.",
+      "uncertainty": "The page shows no last-updated date. Category rules, targeting restrictions and landing-page requirements were not read; creative specifications are not on this page. Verify the relevant category in the live ad account at each paid-media release."
     },
     {
       "id": "WHATSAPP-BUSINESS-POLICY",
@@ -590,8 +618,8 @@
       "quarantined": true,
       "quarantined_on": "2026-10-29",
       "support_status": "NOT_ASSESSED",
-      "quarantine_reason": "The ITU DataHub indicator page returned HTTP 403; indicator values and current year remain NOT_ASSESSED.",
-      "support_reviewed_on": "2026-10-29"
+      "quarantine_reason": "The ITU DataHub indicator page returned HTTP 403; indicator values and current year remain NOT_ASSESSED. Re-attempted 2026-10-31: DataHub still returns HTTP 403 to automated access. The ITU Facts and Figures 2025 page (November 2025) was opened and gives only global figures (nearly three-quarters online, 2.2 billion offline); no East African indicator value was read.",
+      "support_reviewed_on": "2026-10-31"
     },
     {
       "id": "UBOS-NSI-2026",
@@ -1410,19 +1438,19 @@
       "publisher": "Pulse Uganda",
       "tier": 3,
       "url": "https://www.pulse.ug/story/uganda-finally-unblocks-facebook-after-6-years-2026061306180735122",
-      "verified_on": "2026-09-29",
+      "verified_on": "2026-10-31",
       "review_every_days": 30,
-      "next_review": "2026-10-29",
+      "next_review": "2026-11-30",
       "use_for": [
         "Facebook status in Uganda for router defaults, platform-facebook and media planning"
       ],
       "publication_date": "2026-06-13",
-      "accessed_on": "2026-09-29",
+      "accessed_on": "2026-10-31",
       "scope": "Uganda; consumer access to Facebook without a VPN from 13 Jun 2026",
       "freshness_class": "time-sensitive",
       "support_status": "partial",
-      "uncertainty": "Trade press and one minister's post only; the article states no UCC statement confirmed whether the lifting is permanent. No later official confirmation found on 2026-09-29 (searches returned no UCC or wire-service source). Official status NOT_ASSESSED: do not assert Facebook as blocked or as open.",
-      "verification_note": "Read live 2026-09-29: users on several networks reported normal access without a VPN on 13 Jun 2026; Minister of Local Government Balaam Barugahara welcomed the 'unfreezing'. Facebook had been blocked since January 2021. Engine wording: status unstable; verify at the campaign date."
+      "uncertainty": "Trade press and one minister's post only. Re-read on 2026-10-31: the article is dated 13 June 2026 and says UCC had made no statement on whether the lifting was permanent. A further search on 2026-10-31 found no UCC or wire-service confirmation of the Facebook status; separate reports describe election-period restrictions in January 2026 and a restoration announced on 26 January 2026 without settling whether Facebook was included. Official status NOT_ASSESSED: do not assert Facebook as blocked or as open.",
+      "verification_note": "Read live 2026-09-29: users on several networks reported normal access without a VPN on 13 Jun 2026; Minister of Local Government Balaam Barugahara welcomed the 'unfreezing'. Facebook had been blocked since January 2021. Engine wording: status unstable; verify at the campaign date. Re-checked 2026-10-31 (article re-read; official-confirmation search repeated, none found)."
     },
     {
       "id": "UG-INTERNET-SHUTDOWN-2026",

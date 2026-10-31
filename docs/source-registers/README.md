@@ -19,6 +19,10 @@ Last full verification: 13 July 2026. A scoped source review on 29 October 2026 
 - Platform and creator policy: `META-*`, `WHATSAPP-*`, `TIKTOK-*`, and `GOOGLE-*` records.
 - Market context: `UCC-*`, `ITU-*`, and `UBOS-*` records. Prefer a current national source for national decisions and ITU for definition-aligned comparisons.
 
+## Releasing a quarantine
+
+A quarantined record stays `NOT_ASSESSED` until its primary text has been opened and read. To release it, remove `quarantined`, set `quarantine_released_on` and `verified_on` to the same date, set `support_status` to `partial` or `verified`, and fill `scope` (what was read), `release_basis` (how and when) and `uncertainty` (what was not checked). `scripts/check_source_freshness.py` refuses a release that lacks any of these. Changing a date without reading the source is not a release.
+
 Run the freshness gate:
 
 ```powershell
