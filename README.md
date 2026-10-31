@@ -2,7 +2,7 @@
 
 The Social Media Skills Engine (repository `social-media-skills`) is the Chwezi digital marketing and advertising engine: a library of 112 routed skills for consultancy work in Uganda and East Africa. It covers marketing foundations and positioning, channel selection, advertising strategy and budgeting, brand building and distinctive assets, media planning, programmatic buying and brand safety, marketing mix modelling, creative briefs, ad copy, paid search and paid social build specifications, content and copywriting in British, East African English, French and Kiswahili, campaign and community operations, measurement, attribution and reporting, AI-assisted marketing, agency business development and client training. Its produced outputs include client briefs and personas, social-media, digital-marketing and campaign strategies, media plans with reach and frequency calculations, advertising budgets and decision memos, creative briefs, ad copy sets, Google Ads and Meta/TikTok/LinkedIn campaign specifications, content calendars, publication-ready copy, audits, dashboards and monthly reports, ROI business cases, operating playbooks, organisational policies, proposals and training workbooks.
 
-The engine works to named standards rather than house opinion. Personal-data and direct-marketing work is checked against the Uganda Data Protection and Privacy Act 2019 and its 2021 Regulations, with the Kenyan, Rwandan and Tanzanian data-protection laws held in a dated source register (`docs/source-registers/source-register.json`, 179 records under a freshness gate); advertising claims against the Uganda Communications Commission Advertising Standards 2019 and the ICC Advertising and Marketing Communications Code; influencer disclosure against the FTC Endorsement Guides and ASA/CAP guidance; platform mechanics against the Meta, WhatsApp, TikTok, LinkedIn and Google policy pages in the same register; and web accessibility against WCAG 2.2. Method draws on named practitioner texts, among them Chaffey's RACE, Bodnar and Cohen's social ROI formula, Weinberg and Mares's Bullseye and Kotler's segmentation and positioning (full list under References). Every deliverable passes an anti-slop and human-review gate. The engine is for agency owners, account leads, strategists, media planners, copywriters, paid-media specialists, in-house marketing teams and founders who need reviewable, evidence-backed marketing decisions. It plans, specifies, writes, audits and reports; spending money, changing live ad accounts, publishing and contacting people always require explicit client authority.
+The engine works to named standards rather than house opinion. Personal-data and direct-marketing work is checked against the Uganda Data Protection and Privacy Act 2019 (read from primary text, with a recorded scope), with the Ugandan 2021 Regulations and the Kenyan, Rwandan and Tanzanian data-protection laws held in a dated source register (`docs/source-registers/source-register.json`, 179 records under a freshness gate). The Ugandan Regulations and the Kenyan and Rwandan records are quarantined as `NOT_ASSESSED` until their primary text is read (see [Quality and improvement](#quality-and-improvement)); advertising claims against the Uganda Communications Commission Advertising Standards 2019, through a clause screen that marks application to social posts `NOT_ASSESSED` because the standard names neither social media nor influencers, and the ICC Advertising and Marketing Communications Code; influencer disclosure against the FTC Endorsement Guides and ASA/CAP guidance; platform mechanics against the Meta, WhatsApp, TikTok, LinkedIn and Google policy pages in the same register; and web accessibility against WCAG 2.2. Method draws on named practitioner texts, among them Chaffey's RACE, Bodnar and Cohen's social ROI formula, Weinberg and Mares's Bullseye and Kotler's segmentation and positioning (full list under References). Every deliverable passes an anti-slop and human-review gate. The engine is for agency owners, account leads, strategists, media planners, copywriters, paid-media specialists, in-house marketing teams and founders who need reviewable, evidence-backed marketing decisions. It plans, specifies, writes, audits and reports; spending money, changing live ad accounts, publishing and contacting people always require explicit client authority.
 
 ## Installation
 
@@ -19,13 +19,13 @@ The repository ships a Claude Code marketplace (`.claude-plugin/marketplace.json
 
 ### Installer scripts
 
-`install.sh` and `install.ps1` both delegate to `scripts/install-engine.js`, which copies `skills/` and `hooks/` into a Claude root and records what it wrote in `.chwezi/install-state.json`, so uninstall removes only its own files. `--scope user` (the default) targets `~/.claude`; `--scope project` targets `.claude` in the current directory. `--dry-run` prints the plan without writing.
+`install.sh` and `install.ps1` both delegate to `scripts/install-engine.js`, which copies `skills/`, `hooks/` and `rules/` into a Claude root and records what it wrote in `.chwezi/install-state.json`, so uninstall removes only its own files. `--scope user` (the default) targets `~/.claude`; `--scope project` targets `.claude` in the current directory. `--dry-run` prints the plan without writing.
 
 ```sh
 git clone https://github.com/peterbamuhigire/social-media-skills
 cd social-media-skills
-./install.sh --scope project --dry-run   # macOS, Linux or Git Bash; drop --dry-run to install
-.\install.ps1 --scope user               # Windows PowerShell
+bash install.sh --scope project --dry-run   # macOS, Linux or Git Bash; drop --dry-run to install
+.\install.ps1 --scope user                  # Windows PowerShell
 node scripts/install-engine.js doctor --scope user
 node scripts/install-engine.js uninstall --engine social-media-skills --scope user
 ```
@@ -35,23 +35,54 @@ node scripts/install-engine.js uninstall --engine social-media-skills --scope us
 Codex reads the standard layout directly: clone the repository and point Codex at [`AGENTS.md`](AGENTS.md), which routes to `skills/<category>/<skill-name>/SKILL.md`. The Codex-only model-policy check is described in [`.codex/README.md`](.codex/README.md):
 
 ```text
-python <engine-root>/.codex/ensure_model_policy.py --runtime codex --check
+python3 <engine-root>/.codex/ensure_model_policy.py --runtime codex --check
 ```
 
-Claude skips that step.
+Claude skips that step. The check exits 1 and reports drift when no Codex configuration exists.
 
 ### Manual use
 
-Clone the repository, read [`CLAUDE.md`](CLAUDE.md) (which imports [`AGENTS.md`](AGENTS.md)) as the router, then open the matching `SKILL.md` and its `references/`. Before release, run:
+Clone the repository, read [`CLAUDE.md`](CLAUDE.md) (which imports [`AGENTS.md`](AGENTS.md)) as the router, then open the matching `SKILL.md` and its `references/`.
 
-```powershell
-python -m pip install PyYAML
-python -X utf8 scripts\validate_skill_engine.py --baseline quality-baseline.json
-python -X utf8 scripts\check_package_integrity.py
-python -X utf8 scripts\routing_smoke_test.py
-python -X utf8 scripts\check_source_freshness.py
-python -X utf8 -m unittest discover -s tests -p "test_*.py"
+## Validation
+
+Run these from the repository root before a release. `python3 -m pip install PyYAML` is the only dependency the Python checks need (`pyyaml` 6.0.3 was used on 31 October 2026); there is no requirements file. The test suite is `unittest`, which is what CI runs; `pytest` is optional and collects the same tests.
+
+```sh
+python3 -m pip install PyYAML
+python3 -X utf8 scripts/validate_skill_engine.py --baseline quality-baseline.json
+python3 -X utf8 scripts/check_package_integrity.py
+python3 -X utf8 scripts/check_machine_paths.py
+python3 -X utf8 scripts/check_skill_aliases.py
+python3 -X utf8 scripts/routing_smoke_test.py --min-rank1 92 --lint-fixtures
+python3 -X utf8 scripts/check_source_freshness.py
+python3 -X utf8 scripts/source_ingestion_guardrail.py
+python3 -X utf8 -m unittest discover -s tests -p "test_*.py"
+python3 -X utf8 tests/agent-integration/test_social_media_agent_contract.py
+node hooks/test-destructive-bash-gate.js
+node hooks/test-plugin-hook-config.js
+node scripts/generate-plugin-manifest.js --engine . --check
+python3 -X utf8 skills/meta-utility/skill-writing/scripts/quick_validate.py skills/<category>/<skill-name>
 ```
+
+| Command | What it checks | Result on 2026-10-31 |
+|---|---|---|
+| `validate_skill_engine.py --baseline quality-baseline.json` | Skill contract, 300-line budget, zero-debt baseline | Exit 0: 112 skills, 112 compliant, median 121 lines |
+| `check_package_integrity.py` | The 5,000-entry ceiling on the checkout and the package tree | Exit 0: 0 findings |
+| `check_machine_paths.py` | No host-specific paths in active content | Exit 0 |
+| `check_skill_aliases.py` | Retired-skill routes and the 120-skill cap | Exit 0: 83 routes, 112 active |
+| `routing_smoke_test.py --min-rank1 92 --lint-fixtures` | 400 routing fixtures, owned negatives, fixture lint (lexical proxy, not live routing) | Exit 0: 400 of 400 in the top three, precision at 1 381 of 400 (95.2%), 125 of 125 owned negatives |
+| `check_source_freshness.py` | Source register: overdue, quarantined or malformed records | **Exit 1**: five quarantined records (see [Quality and improvement](#quality-and-improvement)) |
+| `source_ingestion_guardrail.py` | No book extractions or reconstructive book content | Exit 0: 0 findings |
+| `unittest discover` | The repository test suite | Exit 0: 116 tests (`pytest` 9.0.3 also reports 116 passed) |
+| `tests/agent-integration/test_social_media_agent_contract.py` | The engine manifest against the router, skill glob and the coordination catalogue | Exit 0 (reports `NOT ASSESSED` for the catalogue when `chwezi-engine-agents` is not a sibling folder) |
+| `hooks/test-destructive-bash-gate.js`, `hooks/test-plugin-hook-config.js` | The shipped command-gate hook | Exit 0: 61 of 61 and 7 of 7 |
+| `generate-plugin-manifest.js --engine . --check` | `.claude-plugin/plugin.json` lists every active skill | Exit 0: current, 112 skills |
+| `quick_validate.py <skill-dir>` | One skill's frontmatter and structure | Exit 0 for the two skill folders run (`playbook-crisis-communications`, `blog-writer`) |
+
+Also available: `scripts/validate_media_plan_provenance.py <plan.json> [--as-of YYYY-MM-DD]` checks the evidence origin of a media plan's numeric inputs and the source state of the platform specifications it cites; `scripts/campaign_behaviour.py` and `scripts/kaizen_phase1_contracts.py` run synthetic fixtures; `scripts/measure_skill_scaffolding.py` reports repeated scaffolding.
+
+Which checks need extra tools: none of the Python or Node checks above needs PowerShell, Pandoc, Mermaid, a browser, LibreOffice or a container. They ran on Linux (Fedora 44, Python 3.14.8, Node 22). Not exercised on Linux: `install.ps1` (needs PowerShell, which was not installed), and `install.sh` without `--dry-run` (it writes to a Claude root; use `--scope project` in a scratch folder). `install.sh` is not marked executable in the repository, so call it through `bash`. Producing `.docx`, `.pdf` or `.xlsx` deliverables is separate from validation and needs the tools named in `AGENTS.md` under Document and Spreadsheet Tooling.
 
 ## Capabilities
 
@@ -287,7 +318,36 @@ Never run an `ALIAS.md`. Use the active owner below; the retired skill's unique 
 - Research, planning, drafting, auditing and reporting run without special permission.
 - Ad spend, live ad-account or platform changes, publishing, messaging and outreach to real people, and personal-data processing need explicit client authority; without it the engine returns a draft marked for approval.
 - Changing legal, platform or market claims must cite a current record in `docs/source-registers/source-register.json`; a stale or unavailable source makes the check `not assessed`.
-- Visual execution routes to the design engine (`chwezi-design-engine`); website builds route to `website-skills`.
+- Visual execution routes to the design engine (`chwezi-design-engine`, held in a folder named `design-system-skills` on some machines); website builds route to `website-skills`.
+
+## Quality and improvement
+
+The evidence for the October 2026 Kaizen cycles is in [`docs/kaizen/2026-10-engine-kaizen/`](docs/kaizen/2026-10-engine-kaizen/) (pass 1, 29 October 2026) and [`docs/kaizen/2026-10-engine-kaizen-pass-2/`](docs/kaizen/2026-10-engine-kaizen-pass-2/) (pass 2, 31 October 2026). Each folder holds the same records: scope and evidence, baseline scorecard, backlog, currentness, experiment log, validation record, final report and next-cycle handoff, with its `logs/` and `tasks/`. The [documentation index](docs/README.md) lists the earlier dated records. Every Kaizen cycle starts from the currentness gate of the Digital Research engine (`digital-research-skills`; some machines still hold it in a folder named `chwezi-research-engine`).
+
+**Latest published score** (pass 2 [final report](docs/kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md)): raw 60.0 and published, capped at `min(raw, 65)`, 60.0. The cap did not bind, and the 95/100 target was not reached. Pass 1 closed at 58.5 and the pass 2 baseline was 58.2. The scores are self-assessed from named measures; no independent re-grade and no behavioural (Tier 3) model run took place.
+
+**Open findings that matter to a user**
+
+- **The source-freshness gate exits 1.** Five quarantined records are overdue since 2026-10-11 and stay `NOT_ASSESSED` until their primary text is read: `UG-DPPR-2021` (Uganda Data Protection and Privacy Regulations 2021), `UG-COPYRIGHT-2026` (Uganda Copyright and Neighbouring Rights (Amendment) Act 2026), `KE-DP-GENERAL-2021` (Kenya Data Protection (General) Regulations 2021), `RW-DPP-2021` (Rwanda Law No. 058/2021) and `ITU-INTERNET-USAGE` (no skill uses it). Do not release a claim that depends on any of them, including the Ugandan and Kenyan direct-marketing rows of the [legal and market release gate](docs/quality-gates/legal-market-release-gate.md). The CI workflow runs this check, so that job fails while the gate exits 1. Details: [03-currentness.md](docs/kaizen/2026-10-engine-kaizen-pass-2/03-currentness.md).
+- **Registered legal statuses are narrow.** `UG-DPPA-2019`, `UG-UCC-ADS-2019`, `TZ-PDPA` and `TZ-PDPR-2023` are `partial`: they record what was read, not that a campaign or post complies. Amendments to the Ugandan Act after December 2023 and any UCC revision were not searched.
+- **Platform specification values are unread.** The platform-specification gate in `validate_media_plan_provenance.py` proves the state of a register record, not the value a platform page shows. Open the live page at each build date.
+- **Routing is lexical and thinly covered.** At the pass 2 close, 9 of 112 skills had three positive and two owned-negative fixtures; the target is 56.
+- **Not yet done:** a four-week launch calendar variant, a tie-break for overlapping media-class thresholds, LinkedIn page-field limits from a LinkedIn Help Centre source, and a broader claim audit. They are listed in [06-next-cycle.md](docs/kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md).
+
+**Date-triggered gates.** `check_source_freshness.py` fails from the day after a record's `next_review`. It already fails today because of the five quarantines above. If no record is re-verified, these further records become overdue (counts are records overdue and not quarantined, measured with `--as-of`):
+
+| Run with `--as-of` | Overdue, not quarantined (cumulative) | Newly overdue since the row above |
+|---|---:|---|
+| 2026-11-08 | 1 | `BING-AI-PERFORMANCE-2026` |
+| 2026-11-13 | 2 | `UG-PDPO-ORG` |
+| 2026-11-29 | 20 | 18 records due 2026-11-18 to 2026-11-28, 14 of them on 2026-11-28 (including the three Computer Misuse records) |
+| 2026-12-01 | 22 | `META-AD-STANDARDS` and `UG-FACEBOOK-ACCESS-2026` (due 2026-11-30) |
+| 2026-12-30 | 90 | 68 records due 2026-12-07 to 2026-12-29, 44 of them on 2026-12-29 |
+| 2027-01-30 | 95 | `UG-DPPA-2019`, `UG-UCC-ADS-2019`, `TZ-PDPA` and `TZ-PDPR-2023` (due 2027-01-29), plus one due 2027-01-09 |
+| 2027-03-30 | 149 | 54 records due 2027-03-23 to 2027-03-29, 44 of them on 2027-03-29 |
+| 2027-09-30 | 174 | The last 25 records (due 2027-09-29); every record that is not quarantined is now overdue |
+
+`validate_media_plan_provenance.py` fails the same way for any plan that cites a register record once that record is overdue; the pass 2 sample plan fails with `--as-of 2027-01-01` because `META-AD-STANDARDS` is overdue by then. The test suite pins its dates and is not date-triggered. The proposed next audit is 2026-11-30, or earlier once the five quarantined records are read.
 
 ## References
 
