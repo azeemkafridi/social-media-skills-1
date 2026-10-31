@@ -46,4 +46,4 @@ The closing evidence commit follows these; `git log kaizen/2026-10-pass2` lists 
 - Scores are self-assessed; a pass-3 independent grading should test them.
 - Routing is lexical; ownership of the three router-line paths belongs to the portfolio cycle.
 
-Branches: started on `main`; work is on `kaizen/2026-10-pass2` (see the end of this report for the checkout state).
+Branches: the repository started on `main` (clean, `f5e1ab1`); the work is on `kaizen/2026-10-pass2` (eleven commits ahead of `main` once this report is committed). At close the checkout was switched back to `main` with an empty `git status --porcelain`; merging or pushing the pass-2 branch is Peter's decision. A confirming run after the evidence commit gave the same results as the final logs, with checkout and package counts of 1,371 and 968 entries (the logs show 1,338 and 958, taken before the evidence commit).
