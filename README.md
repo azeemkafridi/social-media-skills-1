@@ -156,7 +156,12 @@ The full list of skills is in the two catalogue sections below. The 2026-09-29 c
 
 ## Installation
 
-Prerequisites: Claude Code for the plugin route; Node.js 18 or later for the installer scripts; Python 3.11 or later (CI uses 3.12) with `PyYAML` for the validators and tests; Git for cloning.
+You need:
+
+- Claude Code, for the plugin route.
+- Node.js 18 or later, for the installer scripts.
+- Python 3.11 or later (CI uses 3.12) with `PyYAML`, for the validators and tests.
+- Git, for cloning.
 
 ### Claude Code plugin
 
@@ -164,7 +169,11 @@ The repository ships a Claude Code marketplace (`.claude-plugin/marketplace.json
 
 ### Installer scripts
 
-`install.sh` and `install.ps1` both delegate to `scripts/install-engine.js`, which copies `skills/`, `hooks/` and `rules/` into a Claude root and records what it wrote in `.chwezi/install-state.json`, so uninstall removes only its own files. `--scope user` (the default) targets `~/.claude`; `--scope project` targets `.claude` in the current directory. `--dry-run` prints the plan without writing.
+`install.sh` and `install.ps1` both run `scripts/install-engine.js`. It copies `skills/`, `hooks/` and `rules/` into a Claude root. It records what it wrote in `.chwezi/install-state.json`, so uninstall removes only its own files.
+
+- `--scope user` (the default) targets `~/.claude`.
+- `--scope project` targets `.claude` in the current directory.
+- `--dry-run` prints the plan without writing.
 
 ```sh
 git clone https://github.com/peterbamuhigire/social-media-skills
@@ -177,7 +186,7 @@ node scripts/install-engine.js uninstall --engine social-media-skills --scope us
 
 ### Codex
 
-Codex reads the standard layout directly: clone the repository and point Codex at [`AGENTS.md`](AGENTS.md), which routes to `skills/<category>/<skill-name>/SKILL.md`. The Codex-only model-policy check is described in [`.codex/README.md`](.codex/README.md):
+Codex reads the standard layout directly. Clone the repository and point Codex at [`AGENTS.md`](AGENTS.md), which routes to `skills/<category>/<skill-name>/SKILL.md`. The Codex-only model-policy check is described in [`.codex/README.md`](.codex/README.md):
 
 ```text
 python3 <engine-root>/.codex/ensure_model_policy.py --runtime codex --check
@@ -187,11 +196,14 @@ Claude skips that step. The check exits 1 and reports drift when no Codex config
 
 ### Manual use
 
-Clone the repository, read [`CLAUDE.md`](CLAUDE.md) (which imports [`AGENTS.md`](AGENTS.md)) as the router, then open the matching `SKILL.md` and its `references/`.
+Clone the repository. Read [`CLAUDE.md`](CLAUDE.md), which imports [`AGENTS.md`](AGENTS.md), as the router. Then open the matching `SKILL.md` and its `references/`.
 
 ## Validation
 
-Run these from the repository root before a release. `python3 -m pip install PyYAML` is the only dependency the Python checks need (`pyyaml` 6.0.3 was used on 31 October 2026); there is no requirements file. The test suite is `unittest`, which is what CI runs; `pytest` is optional and collects the same tests.
+Run these checks from the repository root before a release.
+
+- `PyYAML` is the only dependency the Python checks need. There is no requirements file. `pyyaml` 6.0.3 was used on 31 October 2026.
+- The test suite is `unittest`, which is what CI runs. `pytest` is optional and collects the same tests.
 
 ```sh
 python3 -m pip install PyYAML
@@ -225,25 +237,53 @@ python3 -X utf8 skills/meta-utility/skill-writing/scripts/quick_validate.py skil
 | `generate-plugin-manifest.js --engine . --check` | `.claude-plugin/plugin.json` lists every active skill | Exit 0: current, 112 skills |
 | `quick_validate.py <skill-dir>` | One skill's frontmatter and structure | Exit 0 for the two skill folders run (`playbook-crisis-communications`, `blog-writer`) |
 
-Also available: `scripts/validate_media_plan_provenance.py <plan.json> [--as-of YYYY-MM-DD]` checks the evidence origin of a media plan's numeric inputs and the source state of the platform specifications it cites; `scripts/campaign_behaviour.py` and `scripts/kaizen_phase1_contracts.py` run synthetic fixtures; `scripts/measure_skill_scaffolding.py` reports repeated scaffolding.
+One exit is not 0 on purpose: `check_source_freshness.py` exits 1 while five quarantined records stay overdue.
 
-Which checks need extra tools: none of the Python or Node checks above needs PowerShell, Pandoc, Mermaid, a browser, LibreOffice or a container. They ran on Linux (Fedora 44, Python 3.14.8, Node 22). Not exercised on Linux: `install.ps1` (needs PowerShell, which was not installed), and `install.sh` without `--dry-run` (it writes to a Claude root; use `--scope project` in a scratch folder). `install.sh` is not marked executable in the repository, so call it through `bash`. Producing `.docx`, `.pdf` or `.xlsx` deliverables is separate from validation and needs the tools named in `AGENTS.md` under Document and Spreadsheet Tooling.
+**Also available**
+
+- `scripts/validate_media_plan_provenance.py <plan.json> [--as-of YYYY-MM-DD]` checks the evidence origin of a media plan's numeric inputs. It also checks the source state of the platform specifications the plan cites.
+- `scripts/campaign_behaviour.py` and `scripts/kaizen_phase1_contracts.py` run synthetic fixtures.
+- `scripts/measure_skill_scaffolding.py` reports repeated scaffolding.
+
+**Which checks need extra tools**
+
+- None of the Python or Node checks above needs PowerShell, Pandoc, Mermaid, a browser, LibreOffice or a container.
+- They ran on Linux (Fedora 44, Python 3.14.8, Node 22).
+- Not exercised on Linux: `install.ps1` (needs PowerShell, which was not installed) and `install.sh` without `--dry-run`. The second writes to a Claude root, so use `--scope project` in a scratch folder.
+- `install.sh` is not marked executable in the repository, so call it through `bash`.
+- Producing `.docx`, `.pdf` or `.xlsx` deliverables is separate from validation. It needs the tools named in `AGENTS.md` under Document and Spreadsheet Tooling.
 
 ## Quality and improvement
 
-The evidence for the October 2026 Kaizen cycles is in [`docs/kaizen/2026-10-engine-kaizen/`](docs/kaizen/2026-10-engine-kaizen/) (pass 1, 29 October 2026) and [`docs/kaizen/2026-10-engine-kaizen-pass-2/`](docs/kaizen/2026-10-engine-kaizen-pass-2/) (pass 2, 31 October 2026). Each folder holds the same records: scope and evidence, baseline scorecard, backlog, currentness, experiment log, validation record, final report and next-cycle handoff, with its `logs/` and `tasks/`. The [documentation index](docs/README.md) lists the earlier dated records. Every Kaizen cycle starts from the currentness gate of the Digital Research engine (`digital-research-skills`; some machines still hold it in a folder named `chwezi-research-engine`).
+The evidence for the October 2026 Kaizen cycles is in [`docs/kaizen/2026-10-engine-kaizen/`](docs/kaizen/2026-10-engine-kaizen/) (pass 1, 29 October 2026) and [`docs/kaizen/2026-10-engine-kaizen-pass-2/`](docs/kaizen/2026-10-engine-kaizen-pass-2/) (pass 2, 31 October 2026). Each folder holds the same records, with its `logs/` and `tasks/`: scope and evidence, baseline scorecard, backlog, currentness, experiment log, validation record, final report and next-cycle handoff. The [documentation index](docs/README.md) lists the earlier dated records.
 
-**Latest published score** (pass 2 [final report](docs/kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md)): raw 60.0 and published, capped at `min(raw, 65)`, 60.0. The cap did not bind, and the 95/100 target was not reached. Pass 1 closed at 58.5 and the pass 2 baseline was 58.2. The scores are self-assessed from named measures; no independent re-grade and no behavioural (Tier 3) model run took place. The changes behind these scores are listed under [What the October 2026 kaizen improved](#what-the-october-2026-kaizen-improved).
+Every Kaizen cycle starts from the currentness gate of the Digital Research engine (`digital-research-skills`; some machines still hold it in a folder named `chwezi-research-engine`).
 
-**Open findings that matter to a user**
+### Latest published score
 
-- **The source-freshness gate exits 1.** Five quarantined records are overdue since 2026-10-11 and stay `NOT_ASSESSED` until their primary text is read: `UG-DPPR-2021` (Uganda Data Protection and Privacy Regulations 2021), `UG-COPYRIGHT-2026` (Uganda Copyright and Neighbouring Rights (Amendment) Act 2026), `KE-DP-GENERAL-2021` (Kenya Data Protection (General) Regulations 2021), `RW-DPP-2021` (Rwanda Law No. 058/2021) and `ITU-INTERNET-USAGE` (no skill uses it). Do not release a claim that depends on any of them, including the Ugandan and Kenyan direct-marketing rows of the [legal and market release gate](docs/quality-gates/legal-market-release-gate.md). The CI workflow runs this check, so that job fails while the gate exits 1. Details: [03-currentness.md](docs/kaizen/2026-10-engine-kaizen-pass-2/03-currentness.md).
-- **Registered legal statuses are narrow.** `UG-DPPA-2019`, `UG-UCC-ADS-2019`, `TZ-PDPA` and `TZ-PDPR-2023` are `partial`: they record what was read, not that a campaign or post complies. Amendments to the Ugandan Act after December 2023 and any UCC revision were not searched.
+The pass 2 [final report](docs/kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md) gives raw 60.0. The published score, capped at `min(raw, 65)`, is 60.0. The cap did not bind, and the 95/100 target was not reached. Pass 1 closed at 58.5, and the pass 2 baseline was 58.2.
+
+The scores are self-assessed from named measures. No independent re-grade and no behavioural (Tier 3) model run took place. The changes behind these scores are under [What the October 2026 kaizen improved](#what-the-october-2026-kaizen-improved).
+
+### Open findings that matter to a user
+
+- **The source-freshness gate exits 1.** Five quarantined records have been overdue since 2026-10-11. They stay `NOT_ASSESSED` until their primary text is read.
+
+  - `UG-DPPR-2021`: Uganda Data Protection and Privacy Regulations 2021.
+  - `UG-COPYRIGHT-2026`: Uganda Copyright and Neighbouring Rights (Amendment) Act 2026.
+  - `KE-DP-GENERAL-2021`: Kenya Data Protection (General) Regulations 2021.
+  - `RW-DPP-2021`: Rwanda Law No. 058/2021.
+  - `ITU-INTERNET-USAGE`: no skill uses it.
+
+  Do not release a claim that depends on any of them. That includes the Ugandan and Kenyan direct-marketing rows of the [legal and market release gate](docs/quality-gates/legal-market-release-gate.md). The CI workflow runs this check, so that job fails while the gate exits 1. Details: [03-currentness.md](docs/kaizen/2026-10-engine-kaizen-pass-2/03-currentness.md).
+- **Registered legal statuses are narrow.** `UG-DPPA-2019`, `UG-UCC-ADS-2019`, `TZ-PDPA` and `TZ-PDPR-2023` are `partial`. They record what was read, not that a campaign or post complies. Amendments to the Ugandan Act after December 2023 and any UCC revision were not searched.
 - **Platform specification values are unread.** The platform-specification gate in `validate_media_plan_provenance.py` proves the state of a register record, not the value a platform page shows. Open the live page at each build date.
-- **Routing is lexical and thinly covered.** At the pass 2 close, 9 of 112 skills had three positive and two owned-negative fixtures; the target is 56.
+- **Routing is lexical and thinly covered.** At the pass 2 close, 9 of 112 skills had three positive and two owned-negative fixtures. The target is 56.
 - **Not yet done:** a four-week launch calendar variant, a tie-break for overlapping media-class thresholds, LinkedIn page-field limits from a LinkedIn Help Centre source, and a broader claim audit. They are listed in [06-next-cycle.md](docs/kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md).
 
-**Date-triggered gates.** `check_source_freshness.py` fails from the day after a record's `next_review`. It already fails today because of the five quarantines above. If no record is re-verified, these further records become overdue (counts are records overdue and not quarantined, measured with `--as-of`):
+### Date-triggered gates
+
+`check_source_freshness.py` fails from the day after a record's `next_review`. As of 2026-10-31 it already fails because of the five quarantines above. If no record is re-verified, further records become overdue on the dates below. The counts are records that are overdue and not quarantined, measured with `--as-of`.
 
 | Run with `--as-of` | Overdue, not quarantined (cumulative) | Newly overdue since the row above |
 |---|---:|---|
@@ -256,7 +296,7 @@ The evidence for the October 2026 Kaizen cycles is in [`docs/kaizen/2026-10-engi
 | 2027-03-30 | 149 | 54 records due 2027-03-23 to 2027-03-29, 44 of them on 2027-03-29 |
 | 2027-09-30 | 174 | The last 25 records (due 2027-09-29); every record that is not quarantined is now overdue |
 
-`validate_media_plan_provenance.py` fails the same way for any plan that cites a register record once that record is overdue; the pass 2 sample plan fails with `--as-of 2027-01-01` because `META-AD-STANDARDS` is overdue by then. The test suite pins its dates and is not date-triggered. The proposed next audit is 2026-11-30, or earlier once the five quarantined records are read.
+`validate_media_plan_provenance.py` fails the same way for any plan that cites an overdue register record. The pass 2 sample plan fails with `--as-of 2027-01-01` because `META-AD-STANDARDS` is overdue by then. The test suite pins its dates and is not date-triggered. The proposed next audit is 2026-11-30, or earlier once the five quarantined records are read.
 
 ## What the October 2026 kaizen improved
 
