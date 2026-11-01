@@ -5,7 +5,7 @@
 ## Every article or thought-leadership piece is researched first — never from assumed knowledge
 
 Same standard as the website engine: a live research wave via
-`digital-research-engine`, one research agent per cohort/region, synthesis done
+the Digital Research engine (`digital-research-skills`), one research agent per cohort/region, synthesis done
 by the orchestrator. Social cut-downs inherit the article's verified intent and
 source map — they do not get a lighter evidence bar just because they are short.
 

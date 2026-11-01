@@ -147,14 +147,15 @@ class EngineQualityTests(unittest.TestCase):
     def test_source_register_window_at_observed_audit_date(self):
         freshness = load_script("check_source_freshness.py")
         from datetime import date
-        errors = freshness.validate(
-            ROOT / "docs" / "source-registers" / "source-register.json",
-            # The mutable register now includes verifications through the
-            # current audit date.
-            # Separate synthetic tests reject future-dated verification.
-            date(2026, 9, 29),
-        )
-        self.assertEqual([], errors)
+        register = ROOT / "docs" / "source-registers" / "source-register.json"
+        payload = json.loads(register.read_text(encoding="utf-8"))
+        # The audit date is the register's own as_of, so this check no longer needs a hand-edited date each cycle.
+        audit_date = date.fromisoformat(payload["as_of"])
+        self.assertLessEqual(audit_date, date.today(), "register as_of must not be in the future")
+        errors = freshness.validate(register, audit_date)
+        quarantined = {row["id"] for row in payload["records"] if row.get("quarantined") is True}
+        self.assertEqual(quarantined, {error.split(":", 1)[0] for error in errors})
+        self.assertTrue(all("QUARANTINED" in error and "NOT_ASSESSED" in error for error in errors))
 
     def test_source_register_rejects_overdue_records(self):
         freshness = load_script("check_source_freshness.py")

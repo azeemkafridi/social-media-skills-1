@@ -43,8 +43,7 @@ operates within.
 ## Mandatory Digital Research currentness gate for Kaizen
 
 Every Kaizen audit, skill edit, reference update, validator change, and
-standardisation decision MUST begin with the Digital Research Engine at
-`C:\wamp64\www\digital-research-engine`. Read its `source-evaluation` and
+standardisation decision MUST begin with the Digital Research Engine (catalogue id `digital-research-skills`; resolve its checkout through the active engine-routing table or `chwezi-engine-agents/catalog/engines.yaml`, never a fixed path). Read its `source-evaluation` and
 `source-verification` skills and the currentness gate reference
 `docs/continuous-improvement/kaizen-currentness-gate.md`.
 
@@ -57,7 +56,7 @@ primary sources; quarantine stale/ambiguous/unsupported claims and mark them
 
 Shared agent, command, hook, evidence, and handoff behavior is mapped for
 social-media work in [`docs/control-plane-adoption.md`](docs/control-plane-adoption.md)
-and governed centrally by `C:\wamp64\www\chwezi-dev-engine\docs\engine-control-plane.md`.
+and governed centrally by `chwezi-dev-engine/docs/engine-control-plane.md` (resolve `chwezi-dev-engine` through the active engine-routing table or the catalogue).
 
 ## Purpose
 
@@ -108,6 +107,9 @@ Apply these alongside the main deliverable skill when relevant:
   separation and reversible experiments; it never supplies current platform facts.
 - `content-writing/references/direct-marketing-ethics-filter.md`: mandatory for
   every ad, offer, outreach sequence, influencer brief and sales page.
+- `content-writing/references/uganda-advertising-standards-check.md`: clause screen for
+  Ugandan advertising claims, testimonials, permissions, labelling and refund terms (UCC
+  Advertising Standards 2019); states which parts are `NOT_ASSESSED`.
 
 ## Routing Rules
 
@@ -159,7 +161,7 @@ A retired skill keeps its folder, but its `SKILL.md` is renamed `ALIAS.md` and i
 
 ## Current evidence and release gates
 
-- For changing platform, legal, regulatory or market claims, use `docs/source-registers/source-register.json`, open the underlying source, and record the source ID, access date, relevant section/table and limitation. Run `python -X utf8 scripts/check_source_freshness.py`; an overdue or unavailable source makes the affected check `not assessed`.
+- For changing platform, legal, regulatory or market claims, use `docs/source-registers/source-register.json`, open the underlying source, and record the source ID, access date, relevant section/table and limitation. Run `python -X utf8 scripts/check_source_freshness.py`; an overdue or unavailable source makes the affected check `not assessed`. The gate currently exits 1 because five quarantined records are overdue (named in the README's Quality and improvement section); claims that depend on them stay blocked.
 - Campaign work uses `docs/world-class-exemplars/campaign-exemplars.md` as a quality model, never as client evidence or a source of benchmark results.
 - Reporting and ROI work uses `docs/evidence-packs/measurement-proof-pack.md` to define, reconcile and trace metrics.
 - All finished creative uses `docs/quality-gates/creative-review-gate.md`. Paid media, WhatsApp, influencer, AI, UGC, public-sector and current-market work also uses `docs/quality-gates/legal-market-release-gate.md`.
@@ -202,7 +204,7 @@ Every skill and every deliverable should be:
 ## Maintenance
 
 - Follow `docs/standards/skill-authoring-standard.md` and start new skills from `docs/templates/SKILL.template.md`.
-- Treat `quality-baseline.json` as a zero-debt assertion, not a waiver list. Run `python -X utf8 scripts/validate_skill_engine.py --baseline quality-baseline.json` and `python -X utf8 scripts/routing_smoke_test.py` before release.
+- Treat `quality-baseline.json` as a zero-debt assertion, not a waiver list. Run `python -X utf8 scripts/validate_skill_engine.py --baseline quality-baseline.json`, `python -X utf8 scripts/check_package_integrity.py`, `python -X utf8 scripts/check_machine_paths.py`, `python -X utf8 scripts/check_skill_aliases.py`, `python -X utf8 scripts/routing_smoke_test.py --min-rank1 92 --lint-fixtures`, `python -X utf8 scripts/check_source_freshness.py` and `python -X utf8 -m unittest discover -s tests -p "test_*.py"` before release (on Linux and macOS use `python3` where `python` is absent; dependencies and current results are in the README's Validation section). The package check enforces the user-set 5,000-entry ceiling on both the full checkout (including `.git` and caches) and the package-oriented tree, and fails closed on incomplete inventory.
 - The legacy `scripts/normalise_skills_for_dual_compat.py` is not an authoring substitute; it may repair marker syntax only and must not invent domain contracts.
 - Run `skill-safety-audit` for third-party imports or major changes.
 - When a skill approaches the line limit, move detailed material into `references/` and leave only the execution workflow in `SKILL.md`.
@@ -215,7 +217,7 @@ The sections below were moved verbatim from the former `CLAUDE.md` when it becam
 
 This repository is the Chwezi **digital marketing and advertising** consultancy engine (the repository keeps its historical name, `social-media-skills`). Skills produce every document in the consultancy lifecycle — credentials, proposals, marketing and advertising strategies, media plans, budgets, creative briefs and concepts, ad copy, campaign build specifications, content plans, platform and paid-media playbooks, testing and scaling plans, measurement and attribution frameworks, reports and training guides — and the agency's own operating system (prospecting, pricing, retention and key-account management).
 
-**Scope boundary.** The engine plans, specifies, writes, audits and reports. It covers advertising strategy, media planning, budgeting, creative briefs and concepts, ad copy, campaign build specifications, testing and scaling logic, optimisation recommendations and reporting across paid search, paid social, display/video, audio, outdoor and direct response. **Spending money, changing live ad accounts, publishing or contacting people still requires explicit, action-specific client authority.** Finished visual execution hands off to `chwezi-design-engine`; website implementation hands off to `website-skills` through the channel-to-site journey handoff (`skills/advertising/ad-to-site-journey-handoff/`); formal tenders to `proposal-skills`; business and full marketing plan documents to `business-plan-skills`; tax, accounting and financial statements to `chwezi-accounting-doctrine`; current facts to `digital-research-engine`. Skills generate text documents, structured plans, specifications and slide outlines — not code, builds or finished designs.
+**Scope boundary.** The engine plans, specifies, writes, audits and reports. It covers advertising strategy, media planning, budgeting, creative briefs and concepts, ad copy, campaign build specifications, testing and scaling logic, optimisation recommendations and reporting across paid search, paid social, display/video, audio, outdoor and direct response. **Spending money, changing live ad accounts, publishing or contacting people still requires explicit, action-specific client authority.** Finished visual execution hands off to `chwezi-design-engine`; website implementation hands off to `website-skills` through the channel-to-site journey handoff (`skills/advertising/ad-to-site-journey-handoff/`); formal tenders to `proposal-skills`; business and full marketing plan documents to `business-plan-skills`; tax, accounting and financial statements to `chwezi-accounting-doctrine`; current facts to `digital-research-skills` (the Digital Research engine: catalogue id `digital-research-skills`, GitHub repository `chwezi-research-engine`). Skills generate text documents, structured plans, specifications and slide outlines — not code, builds or finished designs.
 
 ### Active Roadmap
 
@@ -227,13 +229,13 @@ Treat that roadmap as the controlling sequence for major repository improvements
 
 ### Blog & Article Research — Always Use the Digital Research Engine
 
-**Every blog post, article, or thought-leadership piece must be researched with the digital-research-engine before drafting.** Never write a blog post from assumed knowledge alone. Real examples, statistics, market figures, and any cited research must come from a live research wave, with sources verified and credit given to the original authors (named researchers, institutions, regulators).
+**Every blog post, article, or thought-leadership piece must be researched with the Digital Research engine (`digital-research-skills`) before drafting.** Never write a blog post from assumed knowledge alone. Real examples, statistics, market figures, and any cited research must come from a live research wave, with sources verified and credit given to the original authors (named researchers, institutions, regulators).
 
-- **Engine location:** `digital-research-engine` (on this machine: `C:\wamp64\www\digital-research-engine\skills\`). The repo is cloned on every device Peter works on; if the path differs, locate the `digital-research-engine` repo locally rather than skipping research.
+- **Engine location:** `digital-research-skills`, resolved through the active engine-routing table or the `chwezi-engine-agents` catalogue. The repo is cloned on every device Peter works on; locate it locally rather than skipping research.
 - **Method:** Start with `research-orchestration/SKILL.md` and run a planned multi-agent wave — one research agent per cohort/region (e.g. one per country), each briefed per the engine's standard agent-brief structure. The orchestrator (you) does the synthesis; research agents return raw, sourced findings only.
-- **Article SEO/SERP standard:** Before drafting any article, blog post or thought-leadership piece, run the digital-research-engine's three-wave article study: map intent and 3–7 query clusters; read the accessible top five results for each cluster; then synthesise the content gap, AI-answer opportunities, keyword map, internal links and verified primary-source plan. Use an approved search/API tool rather than direct Google SERP scraping. Record query date, provider, exact queries, result URLs and read status. Treat search visibility as competitive evidence, never as proof or a ranking promise; do not invent search volumes. For bilingual content, research English and French intent separately and translate the decision, not just the words. Social cut-downs inherit the article's verified intent and source map.
+- **Article SEO/SERP standard:** Before drafting any article, blog post or thought-leadership piece, run the Digital Research engine's three-wave article study: map intent and 3–7 query clusters; read the accessible top five results for each cluster; then synthesise the content gap, AI-answer opportunities, keyword map, internal links and verified primary-source plan. Use an approved search/API tool rather than direct Google SERP scraping. Record query date, provider, exact queries, result URLs and read status. Treat search visibility as competitive evidence, never as proof or a ranking promise; do not invent search volumes. For bilingual content, research English and French intent separately and translate the decision, not just the words. Social cut-downs inherit the article's verified intent and source map.
 - **Attribution is mandatory.** Cite real, locatable sources with URLs. Name the student/academic researchers, universities, and regulators whose work you draw on. Mark anything you cannot directly verify as UNVERIFIED and either confirm it or frame it without inventing authors, titles, or statistics. Never fabricate a citation.
-- **Output:** Weave credits naturally into the prose and close each piece with a short "Sources & the researchers worth crediting" block. See `projects/tech-guy-peter/blog-posts/N2-cloud-erp-migration-east-africa.md` as the reference example of this standard.
+- **Output:** Weave credits naturally into the prose and close each piece with a short "Sources & the researchers worth crediting" block. The reference example of this standard is a private project file that is not part of this repository (`projects/` is git-ignored).
 
 ### Naming Conventions
 
@@ -287,7 +289,7 @@ The binding contract is `docs/standards/skill-authoring-standard.md`; use `docs/
 5. **Imperative language** — "Ask for…", "Generate…", "Apply…", "Include…". Not "you should" or "Claude will".
 6. **Composition contracts** — every skill declares sources and absent-input behaviour, outputs and acceptance, evidence, capability permissions, degraded mode, decision risks, stop/recovery workflow, quality standards, five corrected anti-patterns, and direct references.
 7. **Read-only analysis** — audits, reviews, diagnostics, critiques, analysis, and planning default to read-only. Publishing, spend, outreach, production mutation, destructive work, personal-data processing, and certification claims require explicit authority.
-8. **Release gates** — run `python -X utf8 scripts/validate_skill_engine.py --baseline quality-baseline.json`, `python -X utf8 scripts/routing_smoke_test.py`, repository tests, and canonical per-skill validation. Failure counts must remain empty.
+8. **Release gates** — run `python -X utf8 scripts/validate_skill_engine.py --baseline quality-baseline.json`, `python -X utf8 scripts/check_package_integrity.py`, `python -X utf8 scripts/routing_smoke_test.py`, repository tests, and canonical per-skill validation. Failure counts must remain empty.
 
 ### Anti-AI-Slop Quality Gate (Mandatory)
 
@@ -437,4 +439,4 @@ For a prompt handoff, read the local [domain prompt contract](docs/ai-prompting/
 
 ## PORTFOLIO CRAFT CONTRACT
 
-Load `C:\wamp64\www\chwezi-engine-agents\docs\operations\portfolio-craft-standard-2026-09-04.md` when available. Build a campaign in deliberate content units: frame the audience and channel job, select one post or asset, inspect brand and evidence context, draft with a distinct point of view, check platform fit and moderation risk, review the visual/audio treatment, refine, and record the approval and measurement plan. Real examples, source status, correction handling, and a meaningful next action matter more than volume. Do not generate a calendar full of interchangeable posts. Apply `Observe -> Baseline -> Select -> Experiment -> Check -> Standardise -> Teach -> Re-measure` to kaizen itself. Missing source, rights, platform, render, approval, or performance evidence is `NOT ASSESSED`, never a pass.
+Load `chwezi-engine-agents/docs/operations/portfolio-craft-standard-2026-09-04.md` when available (resolve `chwezi-engine-agents` through the active engine-routing table or the catalogue). Build a campaign in deliberate content units: frame the audience and channel job, select one post or asset, inspect brand and evidence context, draft with a distinct point of view, check platform fit and moderation risk, review the visual/audio treatment, refine, and record the approval and measurement plan. Real examples, source status, correction handling, and a meaningful next action matter more than volume. Do not generate a calendar full of interchangeable posts. Apply `Observe -> Baseline -> Select -> Experiment -> Check -> Standardise -> Teach -> Re-measure` to kaizen itself. Missing source, rights, platform, render, approval, or performance evidence is `NOT ASSESSED`, never a pass.

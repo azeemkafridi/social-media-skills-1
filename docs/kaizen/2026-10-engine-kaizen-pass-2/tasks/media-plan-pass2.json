@@ -1,0 +1,83 @@
+{
+  "status": "synthetic assumptions only; not an inventory forecast or market rate",
+  "rows": [
+    {
+      "channel": "LinkedIn",
+      "budget_ugx": {
+        "value": 4000000,
+        "origin": "synthetic_assumption",
+        "source": "scenario assumption; no client brief supplied"
+      },
+      "cpm_ugx": {
+        "value": 25000,
+        "origin": "synthetic_assumption",
+        "source": "scenario assumption; not a market rate"
+      },
+      "frequency": {
+        "value": 2.5,
+        "origin": "synthetic_assumption",
+        "source": "scenario assumption; not a platform control"
+      }
+    },
+    {
+      "channel": "Instagram / Meta",
+      "budget_ugx": {
+        "value": 5000000,
+        "origin": "synthetic_assumption",
+        "source": "scenario assumption; no client brief supplied"
+      },
+      "cpm_ugx": {
+        "value": 10000,
+        "origin": "synthetic_assumption",
+        "source": "scenario assumption; not a market rate"
+      },
+      "frequency": {
+        "value": 3,
+        "origin": "synthetic_assumption",
+        "source": "scenario assumption; not a platform control"
+      }
+    },
+    {
+      "channel": "TikTok",
+      "budget_ugx": {
+        "value": 3000000,
+        "origin": "synthetic_assumption",
+        "source": "scenario assumption; no client brief supplied"
+      },
+      "cpm_ugx": {
+        "value": 8000,
+        "origin": "synthetic_assumption",
+        "source": "scenario assumption; not a market rate"
+      },
+      "frequency": {
+        "value": 3,
+        "origin": "synthetic_assumption",
+        "source": "scenario assumption; not a platform control"
+      }
+    }
+  ],
+  "platform_specs": [
+    {
+      "platform": "Instagram / Meta",
+      "spec": "image and video creative specifications",
+      "source_id": "META-CREATIVE-SPECS-2026",
+      "state": "partial"
+    },
+    {
+      "platform": "Instagram / Meta",
+      "spec": "advertising policy categories (structure only)",
+      "source_id": "META-AD-STANDARDS",
+      "state": "partial"
+    },
+    {
+      "platform": "LinkedIn",
+      "spec": "single image ad file and text limits",
+      "state": "NOT_ASSESSED"
+    },
+    {
+      "platform": "TikTok",
+      "spec": "paid placement video limits",
+      "state": "NOT_ASSESSED"
+    }
+  ]
+}

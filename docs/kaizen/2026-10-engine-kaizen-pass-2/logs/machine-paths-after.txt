@@ -1,0 +1,1 @@
+machine paths: PASS (active content clean; AGENTS.md holds 3 of 3 allowed portfolio-owned lines)

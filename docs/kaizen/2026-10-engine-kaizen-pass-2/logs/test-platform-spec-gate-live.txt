@@ -1,0 +1,9 @@
+$ validate_media_plan_provenance.py tasks/media-plan-pass2.json --as-of 2026-10-31
+media-plan provenance: PASS (3 rows; numeric origins and references present; 4 platform spec(s) checked against the register)
+EXIT=0
+
+$ ... media-plan-pass2-negative-control.json
+media-plan provenance: FAIL (2 finding(s))
+- Uganda / data-protection regulation text: cannot appear as verified: register record UG-DPPR-2021 is quarantined
+- LinkedIn / single image ad file size: a NOT_ASSESSED spec must not carry a value into the plan
+EXIT=1

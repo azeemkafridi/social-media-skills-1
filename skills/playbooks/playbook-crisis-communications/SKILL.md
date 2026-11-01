@@ -1,6 +1,6 @@
 ---
 name: playbook-crisis-communications
-description: Use when something has gone wrong in public (a viral complaint, media attention, a deepfake or impersonation scam, a platform blocked at election time) and the brand must respond fast; produces severity levels, holding statements, timelines, a crisis card and post-crisis review; not for slow review repair (use `playbook-reputation-management`).
+description: Use when something went wrong in public (viral complaint, media attention, deepfake scam, election-time platform block, service outage or data exposure) and the brand must respond fast; produces severity levels, holding statements, timelines, a crisis card and post-crisis review; not for slow review repair (use `playbook-reputation-management`).
 metadata:
   portable: true
   compatible_with:
@@ -14,7 +14,7 @@ Produces a client's social media crisis plan: three severity levels with quantif
 <!-- dual-compat-start -->
 ## Use When
 - A customer's video or post is spreading fast and a reporter wants a comment: how serious is it and who responds in the first hour?
-- A damaging news story is about to air or print and a statement is needed today.
+- A damaging news story is about to air or print and a statement is needed today, or the client's paid service is down or customer data may be exposed and customers need honest updates.
 - Impersonation scams: a faked clip or cloned voice note of the CEO, a copycat page, or forwarded messages asking customers for money in the brand's name; warn customers, report it and correct the record.
 - Platform actions on Facebook, Instagram, WhatsApp, X and LinkedIn during an incident, and what must not be done.
 - Before anything goes wrong: holding statements, a first-30-minute checklist and a plan for an internet shutdown or platform block around an election or national event.
@@ -85,6 +85,7 @@ Without a named client approver, return the narrowest qualified result and mark 
 | The market faces an election, national event or platform block (for example Uganda) | Add the shutdown contingency: offline holding statements, an SMS or radio fallback and a paid-media pause rule (see [internet shutdown contingency](references/internet-shutdown-contingency.md)). | Going silent when mobile internet or social media is suspended. |
 | A health or NGO crisis involves misinformation, impersonation or account targeting | Load [institutional health communication and infodemic response](../../sectors/healthcare/references/institutional-health-communication-and-infodemic-response.md). | Treating an infodemic as an ordinary complaint. |
 | A fake video, cloned voice note, AI image or impersonating account about the client or its leaders is circulating | Run the [synthetic media and deepfake protocol](references/synthetic-media-and-deepfake-protocol.md): detect, verify provenance before any statement, respond, report to platforms, escalate to counsel; treat as Level 3 if it names a person, alleges a crime or touches an election. | Amplifying the fake, or calling genuine content fake. |
+| The client's own service is down, degraded or may have exposed personal data | Run the two-track sequence in [service outage and data-incident communications](references/service-outage-and-data-incident-communications.md): service facts and data questions are confirmed by their owners, the Uganda Act s.23 duty is raised with the privacy lead and counsel, and no cause, scope, recovery time, "no data affected" or refund is stated beyond confirmed facts. | Declaring "no breach" or promising credits the contract does not give. |
 | Comments turn abusive or coordinated | Hide (Instagram Hidden Words) or turn off comments on that post; delete only clear hate speech or harassment and document each action. | A Streisand effect from deleting legitimate criticism. |
 
 ## Quality Standards
@@ -112,6 +113,7 @@ Without a named client approver, return the narrowest qualified result and mark 
 
 - [Crisis response procedures](references/crisis-response-procedures.md): read when running intake, following a level's timeline, adapting holding statements, applying platform actions, running the post-crisis review or building the quick card.
 - [Internet shutdown and platform-block contingency](references/internet-shutdown-contingency.md): read when the plan covers an election period, a national event or a platform that may be blocked.
+- [Service outage and data-incident communications](references/service-outage-and-data-incident-communications.md): read when the client's paid service fails or customer personal data may be exposed, to run the two-track sequence, claim rules and example statements.
 - [Synthetic media and deepfake protocol](references/synthetic-media-and-deepfake-protocol.md): read when a deepfake, cloned voice, AI-generated image or impersonation is circulating, or the client's own AI content is challenged.
 - [CIPR crisis phases benchmark](references/crisis-response-procedures.md#8-benchmark-cipr-crisis-phases): read when checking the plan against the CIPR *Crisis Communication and Social Media* guide (2024; register `CIPR-CRISIS-SOCIAL-2024`).
 - [Institutional health communication and infodemic response](../../sectors/healthcare/references/institutional-health-communication-and-infodemic-response.md): read when a health or NGO crisis involves misinformation, impersonation or account targeting.

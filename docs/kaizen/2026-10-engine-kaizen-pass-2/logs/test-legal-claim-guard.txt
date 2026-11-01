@@ -1,0 +1,9 @@
+test_corrected_statements_are_present (tests.test_legal_claim_guard.LegalClaimGuardTests.test_corrected_statements_are_present) ... ok
+test_guard_allows_the_corrected_wording (tests.test_legal_claim_guard.LegalClaimGuardTests.test_guard_allows_the_corrected_wording) ... ok
+test_guard_catches_the_original_wording (tests.test_legal_claim_guard.LegalClaimGuardTests.test_guard_catches_the_original_wording) ... ok
+test_overstated_claims_do_not_reappear (tests.test_legal_claim_guard.LegalClaimGuardTests.test_overstated_claims_do_not_reappear) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.227s
+
+OK

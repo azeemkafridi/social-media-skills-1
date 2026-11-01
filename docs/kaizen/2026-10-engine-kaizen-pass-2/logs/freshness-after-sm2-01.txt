@@ -1,0 +1,7 @@
+source freshness: FAIL
+- UG-DPPR-2021: QUARANTINED; current support NOT_ASSESSED; review overdue since 2026-10-11
+- UG-COPYRIGHT-2026: QUARANTINED; current support NOT_ASSESSED; review overdue since 2026-10-11
+- KE-DP-GENERAL-2021: QUARANTINED; current support NOT_ASSESSED; review overdue since 2026-10-11
+- RW-DPP-2021: QUARANTINED; current support NOT_ASSESSED; review overdue since 2026-10-11
+- ITU-INTERNET-USAGE: QUARANTINED; current support NOT_ASSESSED; review overdue since 2026-10-11
+freshness exit=1

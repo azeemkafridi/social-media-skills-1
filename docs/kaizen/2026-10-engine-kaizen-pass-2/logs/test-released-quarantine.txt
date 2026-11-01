@@ -1,0 +1,16 @@
+test_malformed_fields_reject_without_crashing (test_source_freshness_negative.SourceFreshnessNegativeTests.test_malformed_fields_reject_without_crashing) ... ok
+test_malformed_quarantine_flag_fails_closed (test_source_freshness_negative.SourceFreshnessNegativeTests.test_malformed_quarantine_flag_fails_closed) ... ok
+test_nonobject_root_and_duplicate_id_reject (test_source_freshness_negative.SourceFreshnessNegativeTests.test_nonobject_root_and_duplicate_id_reject) ... ok
+test_quarantine_blocks_even_before_review_deadline (test_source_freshness_negative.SourceFreshnessNegativeTests.test_quarantine_blocks_even_before_review_deadline) ... ok
+test_quarantine_is_visible_but_remains_a_release_blocker (test_source_freshness_negative.SourceFreshnessNegativeTests.test_quarantine_is_visible_but_remains_a_release_blocker) ... ok
+test_release_date_in_the_future_is_refused (test_source_freshness_negative.SourceFreshnessNegativeTests.test_release_date_in_the_future_is_refused) ... ok
+test_released_quarantine_requires_scope_basis_status_and_matching_date (test_source_freshness_negative.SourceFreshnessNegativeTests.test_released_quarantine_requires_scope_basis_status_and_matching_date) ... ok
+test_released_quarantine_with_basis_passes (test_source_freshness_negative.SourceFreshnessNegativeTests.test_released_quarantine_with_basis_passes) ... ok
+test_released_record_cannot_still_be_quarantined (test_source_freshness_negative.SourceFreshnessNegativeTests.test_released_record_cannot_still_be_quarantined) ... ok
+test_url_authority_validation_and_cli_exit (test_source_freshness_negative.SourceFreshnessNegativeTests.test_url_authority_validation_and_cli_exit) ... ok
+test_valid_window_and_future_verification (test_source_freshness_negative.SourceFreshnessNegativeTests.test_valid_window_and_future_verification) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.140s
+
+OK

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-09-29",
+  "as_of": "2026-10-31",
   "records": [
     {
       "id": "GOOGLE-AI-SEARCH-GUIDE-2026",
@@ -236,16 +236,27 @@
       "publisher": "Uganda Legal Information Institute",
       "tier": 1,
       "url": "https://ulii.org/en/akn/ug/act/2019/9/eng%402019-05-03",
-      "verified_on": "2026-07-13",
+      "verified_on": "2026-10-31",
       "review_every_days": 90,
-      "next_review": "2026-10-11",
+      "next_review": "2027-01-29",
       "use_for": [
         "personal-data collection",
         "audience lists",
         "analytics",
         "direct marketing"
       ],
-      "verification_note": "Official legal database; check the latest-version notice and amendments before release."
+      "verification_note": "Text read from the ULII PDF (https://media.ulii.org/media/legislation/18002/source_file/98f959926ba2429c/2019-9.pdf). Section numbers are unchanged in the Cap. 97 edition. s.7 has no penalty; offences are ss.35 to 37. Check the Authority for amendments and current PDPO guidance before release.",
+      "quarantined_on": "2026-10-29",
+      "support_status": "partial",
+      "support_reviewed_on": "2026-10-31",
+      "quarantined": false,
+      "quarantine_released_on": "2026-10-31",
+      "release_basis": "Opened and read the ULII-published PDF of the Act (Chapter 97, Act 9 of 2019, PDF created 12 August 2026) on 2026-10-31; claim text for ss.7, 8, 19, 23, 26 and 35 to 37 compared with the engine wording.",
+      "accessed_on": "2026-10-31",
+      "freshness_class": "context-bound",
+      "scope": "Sections 7, 8, 19, 23, 26 and 35 to 37 and the section list of the Act as printed in the ULII Cap. 97 collection PDF (legislation as at 3 May 2019). Use for the consent rule, children, transfers outside Uganda, breach notification to the Authority, the direct-marketing objection right and the offence provisions only.",
+      "uncertainty": "The PDF states the collection was last checked for updates on 31 December 2023 and that updates may exist. The ULII HTML point-in-time pages return HTTP 403 to automated access, so the latest-version notice was not read. A search on 2026-10-31 found no 2026 amendment to the Act in secondary sources; a draft digital media law reported in April 2026 is said to touch it (draft, not read). Amendment status after 2023 is NOT_ASSESSED.",
+      "publication_date": "2019-05-03"
     },
     {
       "id": "UG-DPPR-2021",
@@ -263,7 +274,12 @@
         "data-subject requests",
         "controller and processor duties"
       ],
-      "verification_note": "Read with the Act and current PDPO guidance."
+      "verification_note": "Read with the Act and current PDPO guidance.",
+      "quarantined": true,
+      "quarantined_on": "2026-10-29",
+      "support_status": "NOT_ASSESSED",
+      "quarantine_reason": "Official ULII page returned HTTP 403 in direct open; no current official gazette amendment search completed. Do not rely on this record for current legal conclusions. Re-attempted 2026-10-31: ULII HTML and source URLs still return HTTP 403 to automated access, and no ULII media PDF for the Regulations was found; only secondary sources describe them (S.I. 21 of 2021).",
+      "support_reviewed_on": "2026-10-31"
     },
     {
       "id": "UG-PDPO-ORG",
@@ -291,16 +307,26 @@
       "publisher": "Uganda Communications Commission",
       "tier": 1,
       "url": "https://www.ucc.co.ug/download/the-advertising-standards/",
-      "verified_on": "2026-07-13",
+      "verified_on": "2026-10-31",
       "review_every_days": 90,
-      "next_review": "2026-10-11",
+      "next_review": "2027-01-29",
       "use_for": [
         "advertising claims",
         "minors",
         "regulated categories",
         "broadcast and digital creative"
       ],
-      "verification_note": "Confirm sector-specific rules and approvals in addition to the general standard."
+      "verification_note": "Standard text read at https://www.ucc.co.ug/wp-content/uploads/2023/10/Advertising-standard-2019-Final.pdf (linked from the register URL). Annex 5 is worded for broadcast. Sector annexes (alcohol, gambling, financial products, health, charities, children) need their own check.",
+      "quarantined_on": "2026-10-29",
+      "support_status": "partial",
+      "support_reviewed_on": "2026-10-31",
+      "quarantined": false,
+      "quarantine_released_on": "2026-10-31",
+      "release_basis": "Opened the UCC-hosted PDF and extracted its text on 2026-10-31 (3,303 lines); clause numbers checked against the engine reference. A UCC ruling of January 2026 reported by Daily Monitor (28 January 2026) relied on the Advertising Standards 2019 (Annex 7), which supports that the standard is still applied.",
+      "accessed_on": "2026-10-31",
+      "freshness_class": "context-bound",
+      "scope": "Text of the Advertising Standards 2019 as hosted by UCC (PDF; download page dated 31 October 2023): Preamble, section 3 interpretation, section 6 clause 10 testimonials, Annex 4 clauses 6, 7, 43 and 44, Annex 5 recognition of advertising, Annex 7 split-screen. No clause names the internet, social media or influencers. Use as a screening reference, not as a statement of how UCC applies it to digital posts.",
+      "uncertainty": "No amended or superseding edition is linked from the UCC page, but absence of an amendment is not proven: UCC gazette notices were not searched. The standard says it is reviewed and amended from time to time. Application to social media and influencer content is an inference, not stated in the text."
     },
     {
       "id": "UG-COPYRIGHT-2026",
@@ -320,7 +346,12 @@
         "UGC",
         "AI-assisted assets"
       ],
-      "verification_note": "Recent amendment: require rights evidence and legal review for contested or material uses."
+      "verification_note": "Recent amendment: require rights evidence and legal review for contested or material uses.",
+      "quarantined": true,
+      "quarantined_on": "2026-10-29",
+      "support_status": "NOT_ASSESSED",
+      "quarantine_reason": "ULII indexed the May 2026 amendment, but direct source open was blocked and current consolidated legal status was not independently confirmed. Do not use as current legal advice. Re-attempted 2026-10-31: ULII HTML and source URLs still return HTTP 403 to automated access; no alternative official route to the amendment text was found.",
+      "support_reviewed_on": "2026-10-31"
     },
     {
       "id": "KE-DP-GENERAL-2021",
@@ -339,7 +370,12 @@
         "opt-out",
         "data-subject notices"
       ],
-      "verification_note": "Use with the Kenya Data Protection Act and current ODPC guidance."
+      "verification_note": "Use with the Kenya Data Protection Act and current ODPC guidance.",
+      "quarantined": true,
+      "quarantined_on": "2026-10-29",
+      "support_status": "NOT_ASSESSED",
+      "quarantine_reason": "Official ODPC-hosted 2021 regulation document was opened during research, but current amendment or status review was not completed. Quarantined pending current legal review; do not use for current legal conclusions. Re-attempted 2026-10-31: the registered ODPC PDF URL returns HTTP 404, the ODPC home page shows a maintenance notice, and the Kenya Law URL returned an empty challenge response; the register URL is dead and the correct one is not yet found.",
+      "support_reviewed_on": "2026-10-31"
     },
     {
       "id": "RW-DPP-2021",
@@ -357,42 +393,69 @@
         "cross-border campaigns",
         "Rwanda audiences"
       ],
-      "verification_note": "Confirm current implementing guidance and registration duties before processing."
+      "verification_note": "Confirm current implementing guidance and registration duties before processing.",
+      "quarantined": true,
+      "quarantined_on": "2026-10-29",
+      "support_status": "NOT_ASSESSED",
+      "quarantine_reason": "Official Rwanda DPO page was opened and partially inspected, but current amendment and implementing-guidance review was not completed. Quarantined pending current legal review; do not use for current legal conclusions. Re-attempted 2026-10-31: the official page https://dpo.gov.rw/dpp-law/general-provisions was opened: it shows Chapter V (Articles 29 to 36, registration) and the Article 3 consent definition but no law number, gazette date or amendment notice, and the articles themselves were not read.",
+      "support_reviewed_on": "2026-10-31"
     },
     {
       "id": "TZ-PDPA",
       "domain": "legal",
       "jurisdiction": "Tanzania",
-      "title": "Personal Data Protection Act",
+      "title": "Personal Data Protection Act, 2022 (Cap. 44), English version GN 395B",
       "publisher": "Personal Data Protection Commission Tanzania",
       "tier": 1,
-      "url": "https://www.pdpc.go.tz/en/policies-legislations/acts/",
-      "verified_on": "2026-07-13",
+      "url": "https://pdpc.go.tz/the-personal-data-protection-act-2022/",
+      "verified_on": "2026-10-31",
       "review_every_days": 90,
-      "next_review": "2026-10-11",
+      "next_review": "2027-01-29",
       "use_for": [
         "personal-data processing",
         "Tanzania campaigns"
       ],
-      "verification_note": "Confirm territorial application, current notices and controller/processor registration with Tanzanian counsel or the PDPC."
+      "verification_note": "Official site is pdpc.go.tz (www.pdpc.go.tz fails certificate validation). Use with the Collection and Processing Regulations 2023 and PDPC registration guidance.",
+      "quarantined_on": "2026-10-29",
+      "support_status": "partial",
+      "support_reviewed_on": "2026-10-31",
+      "quarantined": false,
+      "quarantine_released_on": "2026-10-31",
+      "release_basis": "Downloaded and extracted the PDPC-hosted PDF of the English version on 2026-10-31; ss.14, 16 and 35 and the arrangement of sections read.",
+      "accessed_on": "2026-10-31",
+      "freshness_class": "context-bound",
+      "scope": "Sections 14 (registration before collecting or processing), 16 (five-year registration period) and 35 (right to prevent processing for direct marketing) of the Personal Data Protection Act, Cap. 44, English version published as GN 395B on 13 June 2023.",
+      "uncertainty": "Amendments after June 2023, commencement and enforcement dates, fees and the registration portal procedure were not read. The PDPC page shows only a web publication date of 23 March 2026. Not legal advice.",
+      "publication_date": "2023-06-13"
     },
     {
       "id": "TZ-PDPR-2023",
       "domain": "legal",
       "jurisdiction": "Tanzania",
-      "title": "Personal Data Protection regulations, 2023",
+      "title": "Personal Data Protection (Personal Data Collection and Processing) Regulations, 2023 (GN 449C)",
       "publisher": "Personal Data Protection Commission Tanzania",
       "tier": 1,
-      "url": "https://www.pdpc.go.tz/en/policies-legislations/regulations/",
-      "verified_on": "2026-07-13",
+      "url": "https://pdpc.go.tz/publications/the-personal-data-protection-personal-data-collection-and-processing-regulations-2023/",
+      "verified_on": "2026-10-31",
       "review_every_days": 90,
-      "next_review": "2026-10-11",
+      "next_review": "2027-01-29",
       "use_for": [
         "collection and processing",
         "complaints",
         "Tanzania campaigns"
       ],
-      "verification_note": "Read the collection-and-processing regulations, not only the complaints procedure."
+      "verification_note": "Official site is pdpc.go.tz. Complaints Settlement Procedures Regulations 2023 are a separate instrument listed on the same site and were not read.",
+      "quarantined_on": "2026-10-29",
+      "support_status": "partial",
+      "support_reviewed_on": "2026-10-31",
+      "quarantined": false,
+      "quarantine_released_on": "2026-10-31",
+      "release_basis": "Downloaded and extracted the PDPC-hosted PDF on 2026-10-31 and searched the text; arrangement of regulations read.",
+      "accessed_on": "2026-10-31",
+      "freshness_class": "context-bound",
+      "scope": "Identity and text of the Personal Data Protection (Personal Data Collection and Processing) Regulations, 2023 (GN 449C, published 4 July 2023, English version): the instrument exists, its title and gazette number, and that its text contains no direct-marketing procedure (no occurrence of \"marketing\" or \"opt-out\" in the extracted text).",
+      "uncertainty": "Substantive registration and collection rules were not read in full; amendments after July 2023 were not checked. Act s.35 refers to procedures prescribed in regulations, but the direct-marketing procedure was not found in this instrument and may sit elsewhere (NOT_ASSESSED).",
+      "publication_date": "2023-07-04"
     },
     {
       "id": "META-AD-STANDARDS",
@@ -401,10 +464,10 @@
       "title": "Meta Advertising Standards",
       "publisher": "Meta",
       "tier": 1,
-      "url": "https://www.facebook.com/policies/ads/",
-      "verified_on": "2026-09-19",
+      "url": "https://transparency.meta.com/policies/ad-standards/",
+      "verified_on": "2026-10-31",
       "review_every_days": 30,
-      "next_review": "2026-10-19",
+      "next_review": "2026-11-30",
       "use_for": [
         "Facebook ads",
         "Instagram ads",
@@ -412,19 +475,29 @@
         "targeting",
         "landing pages"
       ],
-      "verification_note": "Direct HTTPS retrieval returned 200 on 2026-09-19. Treat the policy categories and destination requirements as volatile; check the relevant category and destination at each paid-media release. Browser access may require an authenticated Meta session."
+      "verification_note": "The old facebook.com/policies/ads URL now redirects to the Meta Transparency Centre. Treat every rule as volatile; this record supports only the policy structure.",
+      "quarantined_on": "2026-10-29",
+      "support_status": "partial",
+      "support_reviewed_on": "2026-10-31",
+      "quarantined": false,
+      "quarantine_released_on": "2026-10-31",
+      "release_basis": "Opened https://transparency.meta.com/policies/ad-standards/ (reached by redirect from the facebook.com policy URL) on 2026-10-31 and read the headings.",
+      "accessed_on": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "scope": "Structure of the Meta Advertising Standards page: twelve top-level headings (including Prohibited Commercial Practices, Restricted goods and services, Privacy Violations and Personal Attributes, Social issue, electoral or political advertising, Data use restrictions) and the statement that policies may change without notice. No individual policy rule was read.",
+      "uncertainty": "The page shows no last-updated date. Category rules, targeting restrictions and landing-page requirements were not read; creative specifications are not on this page. Verify the relevant category in the live ad account at each paid-media release."
     },
     {
       "id": "WHATSAPP-BUSINESS-POLICY",
       "domain": "platform",
       "jurisdiction": "Global",
-      "title": "WhatsApp Business Messaging Policy",
+      "title": "WhatsApp Business Policy",
       "publisher": "WhatsApp",
       "tier": 1,
       "url": "https://whatsappbusiness.com/policy/",
-      "verified_on": "2026-09-19",
+      "verified_on": "2026-10-29",
       "review_every_days": 30,
-      "next_review": "2026-10-19",
+      "next_review": "2026-11-28",
       "use_for": [
         "opt-in",
         "opt-out",
@@ -432,26 +505,30 @@
         "regulated verticals",
         "government use"
       ],
-      "verification_note": "Official policy page retrieved on 2026-09-19. Retain opt-in provenance, honour on- and off-platform opt-outs, use approved templates outside the 24-hour customer-service window, and provide escalation paths for automation."
+      "verification_note": "Official policy text opened 2026-10-29. Checked opt-in expectations, honoring opt-outs, the 24-hour customer-service window, approved templates outside it, and escalation options. These are platform-policy statements only; live account configuration and Uganda legal compliance remain NOT_ASSESSED.",
+      "support_status": "partial",
+      "support_reviewed_on": "2026-10-29"
     },
     {
       "id": "TIKTOK-BRANDED-CONTENT",
       "domain": "platform",
       "jurisdiction": "Global",
-      "title": "TikTok Branded Content Policy",
+      "title": "TikTok One Policies",
       "publisher": "TikTok",
       "tier": 1,
-      "url": "https://support.tiktok.com/en/business-and-creator/creator-and-business-accounts/branded-content-policy",
-      "verified_on": "2026-09-19",
+      "url": "https://ads.tiktok.com/resources/help/article/tiktok-one-policies?lang=en",
+      "verified_on": "2026-10-29",
       "review_every_days": 30,
-      "next_review": "2026-10-19",
+      "next_review": "2026-11-28",
       "use_for": [
         "creator campaigns",
         "commercial disclosure",
         "prohibited industries",
         "minors"
       ],
-      "verification_note": "Official TikTok Help Center URL retrieved on 2026-09-19; the page routes branded-content guidance through the creator/business help centre. Check market-specific requirements, disclosure settings and commercial-music rules before posting."
+      "verification_note": "Official TikTok Business Resource Centre page opened 2026-10-29; page says last updated August 2026 and states that content promoting a brand, product or service must use the commercial-content disclosure setting. This verifies that narrow requirement only; market-specific enforcement and account behaviour remain NOT_ASSESSED.",
+      "support_status": "partial",
+      "support_reviewed_on": "2026-10-29"
     },
     {
       "id": "GOOGLE-ADS-POLICY",
@@ -461,61 +538,66 @@
       "publisher": "Google",
       "tier": 1,
       "url": "https://support.google.com/adspolicy/answer/6008942?hl=en",
-      "verified_on": "2026-09-19",
+      "verified_on": "2026-10-29",
       "review_every_days": 30,
-      "next_review": "2026-10-19",
+      "next_review": "2026-11-28",
       "use_for": [
         "YouTube ads",
         "Google ads",
         "destinations",
         "restricted content"
       ],
-      "verification_note": "Official Google Ads policy centre retrieved on 2026-09-19. Open the specific content, targeting, destination, editorial and data-collection policy that applies to the campaign; Google may restrict, block or suspend non-compliant advertising."
+      "verification_note": "Official Google Ads policies page opened 2026-10-29. Checked the current policy-centre categories and its statement that advertisers must follow local legal requirements and platform policies. Campaign-category, destination and market-specific eligibility remain NOT_ASSESSED.",
+      "support_status": "partial",
+      "support_reviewed_on": "2026-10-29"
     },
     {
       "id": "GOOGLE-PERSONALISED-ADS",
       "domain": "platform",
       "jurisdiction": "Global",
-      "title": "Personalised advertising policy",
+      "title": "Restricted targeting in personalised advertising",
       "publisher": "Google",
       "tier": 1,
       "url": "https://support.google.com/adspolicy/answer/143465?hl=en",
-      "verified_on": "2026-09-19",
+      "verified_on": "2026-10-29",
       "review_every_days": 30,
-      "next_review": "2026-10-19",
+      "next_review": "2026-11-28",
       "use_for": [
         "remarketing",
         "customer lists",
         "sensitive interests",
         "audience targeting"
       ],
-      "verification_note": "Official Google Restricted targeting in personalised advertising page retrieved on 2026-09-19. Do not pass PII through ad data segments, send precise location without consent, or target overly narrow audiences; review sensitive-interest and access-to-opportunities restrictions before launch."
+      "verification_note": "Official Google Ads Help page opened 2026-10-29 using its English-Australia locale variant. Checked current text on PII in data segments, precise-location consent, narrow audience targeting and sensitive categories. This is Google policy only; campaign applicability and account status remain NOT_ASSESSED.",
+      "support_status": "partial",
+      "support_reviewed_on": "2026-10-29"
     },
     {
       "id": "UCC-MARKET-REPORTS",
       "domain": "market",
       "jurisdiction": "Uganda",
-      "title": "Quarterly Market Performance Reports",
+      "title": "UCC Quarterly Market Performance Reports index",
       "publisher": "Uganda Communications Commission",
       "tier": 1,
       "url": "https://www.ucc.co.ug/market-performance-reports/",
-      "verified_on": "2026-09-04",
+      "verified_on": "2026-10-29",
       "review_every_days": 45,
-      "next_review": "2026-10-19",
+      "next_review": "2026-12-13",
       "use_for": [
         "telecom subscriptions",
         "connectivity",
         "device and service context"
       ],
-      "verification_note": "Verified against UCC's official market-performance index and dedicated Q2 2026 report page on 2026-09-04. The newest listed report is Q2 2026 (Jun 2026), displayed as published 12 August 2026. Use the report period, exact table, definition, and denominator for any statistic; do not infer a statistic from the index page.",
+      "verification_note": "Official UCC 2026 publications index opened 2026-10-29. It lists the Q2 2026 report, dated 12 August 2026, above Q1 2026. The index supports report identity and ordering only; any statistic must be verified in the relevant report table with its definition and denominator.",
       "source_scope": "UCC official market-performance report index and the latest listed quarterly report for Uganda ICT market context.",
       "report_period": "Q2 2026 (Jun 2026)",
       "publication_date": "2026-08-12",
       "accessed_on": "2026-09-04",
       "freshness_class": "time-sensitive",
-      "support_status": "verified_for_report_availability",
+      "support_status": "partial",
       "uncertainty": "The official UCC index and dedicated report page confirm the latest listed report, reporting period, and page publication date. Individual statistics still require report-level table, denominator, and definition checks before use.",
-      "owner": "social-media-engine maintainer"
+      "owner": "social-media-engine maintainer",
+      "support_reviewed_on": "2026-10-29"
     },
     {
       "id": "ITU-INTERNET-USAGE",
@@ -532,7 +614,12 @@
         "cross-country internet-use comparisons",
         "access constraints"
       ],
-      "verification_note": "Record the indicator definition, year and disaggregation; do not compare it directly with subscriptions."
+      "verification_note": "Record the indicator definition, year and disaggregation; do not compare it directly with subscriptions.",
+      "quarantined": true,
+      "quarantined_on": "2026-10-29",
+      "support_status": "NOT_ASSESSED",
+      "quarantine_reason": "The ITU DataHub indicator page returned HTTP 403; indicator values and current year remain NOT_ASSESSED. Re-attempted 2026-10-31: DataHub still returns HTTP 403 to automated access. The ITU Facts and Figures 2025 page (November 2025) was opened and gives only global figures (nearly three-quarters online, 2.2 billion offline); no East African indicator value was read.",
+      "support_reviewed_on": "2026-10-31"
     },
     {
       "id": "UBOS-NSI-2026",
@@ -626,121 +713,127 @@
       "id": "PREMIUM-LI-POLICY-2026",
       "domain": "platform",
       "jurisdiction": "Exact public page and stated claim only",
-      "title": "Professional Community Policies",
+      "title": "LinkedIn Professional Community Policies",
       "publisher": "www.linkedin.com",
       "tier": 1,
       "url": "https://www.linkedin.com/legal/professional-community-policies",
-      "verified_on": "2026-09-22",
+      "verified_on": "2026-10-29",
       "review_every_days": 30,
-      "next_review": "2026-10-22",
+      "next_review": "2026-11-28",
       "use_for": [
         "Be trustworthy; Be professional"
       ],
       "as_of": "2026-09-22",
       "freshness_class": "context-bound",
-      "support_status": "verified",
+      "support_status": "partial",
       "uncertainty": "Policy text, not an account enforcement prediction.",
-      "verification_note": "root source-content inspection; narrow content check, not account or outcome certification."
+      "verification_note": "Official LinkedIn policy page opened 2026-10-29. Checked its current Trustworthy and Professional policy sections, including truthful identity/content and professional conduct. This is a narrow content-policy check; post reach and account enforcement are NOT_ASSESSED.",
+      "support_reviewed_on": "2026-10-29"
     },
     {
       "id": "PREMIUM-LI-AGREEMENT-2026",
       "domain": "platform",
       "jurisdiction": "Exact public page and stated claim only",
-      "title": "User Agreement",
+      "title": "LinkedIn User Agreement, Section 8",
       "publisher": "www.linkedin.com",
       "tier": 1,
       "url": "https://www.linkedin.com/legal/user-agreement",
-      "verified_on": "2026-09-22",
+      "verified_on": "2026-10-29",
       "review_every_days": 30,
-      "next_review": "2026-10-22",
+      "next_review": "2026-11-28",
       "use_for": [
         "Section 8 Dos and Donts"
       ],
       "as_of": "2026-09-22",
       "freshness_class": "context-bound",
-      "support_status": "verified",
+      "support_status": "partial",
       "uncertainty": "Effective date displayed 2025-11-03; exact action/account interpretation requires review.",
-      "verification_note": "root source-content inspection; narrow content check, not account or outcome certification."
+      "verification_note": "Official LinkedIn User Agreement opened 2026-10-29; page is effective 3 November 2025 and includes Section 8 Dos and Don’ts. Checked the section on scraping, unauthorised automation, and inauthentic engagement. Do not extend it beyond the agreement or infer account-specific enforcement.",
+      "support_reviewed_on": "2026-10-29"
     },
     {
       "id": "PREMIUM-GA4-2026",
       "domain": "platform",
       "jurisdiction": "Exact public page and stated claim only",
-      "title": "Select attribution settings",
+      "title": "Google Analytics: Select attribution settings",
       "publisher": "support.google.com",
       "tier": 1,
       "url": "https://support.google.com/analytics/answer/10597962?hl=en",
-      "verified_on": "2026-09-22",
+      "verified_on": "2026-10-29",
       "review_every_days": 30,
-      "next_review": "2026-10-22",
+      "next_review": "2026-11-28",
       "use_for": [
         "Reporting attribution model"
       ],
       "as_of": "2026-09-22",
       "freshness_class": "context-bound",
-      "support_status": "verified",
+      "support_status": "partial",
       "uncertainty": "Does not describe every Google advertising product or confirm account settings.",
-      "verification_note": "root source-content inspection; narrow content check, not account or outcome certification."
+      "verification_note": "Official Google Analytics Help page opened 2026-10-29. Checked current settings concepts, access role requirement, attribution-model choices and lookback-window section. Property permissions and actual configuration remain NOT_ASSESSED.",
+      "support_reviewed_on": "2026-10-29"
     },
     {
       "id": "PREMIUM-TT-MUSIC-2026",
       "domain": "platform",
       "jurisdiction": "Exact public source and stated claim",
-      "title": "How to Use the Commercial Music Library",
+      "title": "TikTok Commercial Music Library",
       "publisher": "ads.tiktok.com",
       "tier": 1,
       "url": "https://ads.tiktok.com/resources/help/article/how-to-use-the-commercial-music-library?lang=en-GB",
-      "verified_on": "2026-09-22",
+      "verified_on": "2026-10-29",
       "review_every_days": 30,
-      "next_review": "2026-10-22",
+      "next_review": "2026-11-28",
       "use_for": [
         "Region selection and usable placements"
       ],
       "as_of": "2026-09-22",
       "freshness_class": "context-bound",
-      "support_status": "verified",
+      "support_status": "partial",
       "uncertainty": "Specific sound rights and intended use still require verification.",
-      "verification_note": "root independent reopening after researcher handoff; narrow content check, not account or outcome certification."
+      "verification_note": "Official TikTok Business Resource Centre article opened 2026-10-29; page says last updated July 2026. Checked region and usable-placement filters and that business-account sound choice is tied to the Commercial Music Library. Track-specific rights, current regional availability and live account UI remain NOT_ASSESSED.",
+      "support_reviewed_on": "2026-10-29"
     },
     {
       "id": "PREMIUM-TT-TEST-2026",
       "domain": "platform",
       "jurisdiction": "Exact public source and stated claim",
-      "title": "Ad testing guide",
+      "title": "TikTok Ads testing guide",
       "publisher": "ads.tiktok.com",
       "tier": 1,
       "url": "https://ads.tiktok.com/business/en/guides/ad-testing-guide?redirected=1",
-      "verified_on": "2026-09-22",
+      "verified_on": "2026-10-29",
       "review_every_days": 30,
-      "next_review": "2026-10-22",
+      "next_review": "2026-11-28",
       "use_for": [
         "Core strategies for ad testing"
       ],
       "as_of": "2026-09-22",
       "freshness_class": "context-bound",
-      "support_status": "verified",
+      "support_status": "partial",
       "uncertainty": "Vendor guidance, not proof of statistical validity or a guaranteed outcome.",
-      "verification_note": "root independent reopening after researcher handoff; narrow content check, not account or outcome certification."
+      "verification_note": "Official TikTok Business guide opened 2026-10-29. The page has no visible publication/update date; its current page content discusses objectives, changing one variable, sufficient audience/time and goal-aligned measurement. Treat it as process guidance, not a current platform specification or performance benchmark.",
+      "support_reviewed_on": "2026-10-29"
     },
     {
       "id": "PREMIUM-TT-PIXEL-2026",
       "domain": "platform",
       "jurisdiction": "Exact public source and stated claim",
-      "title": "Set up and Verify Pixel",
+      "title": "TikTok web data connection setup",
       "publisher": "ads.tiktok.com",
       "tier": 1,
       "url": "https://ads.tiktok.com/resources/help/article/get-started-pixel?lang=en",
-      "verified_on": "2026-09-22",
+      "verified_on": "2026-10-29",
       "review_every_days": 30,
-      "next_review": "2026-10-22",
+      "next_review": "2026-11-28",
       "use_for": [
         "Events API; Test Events and Diagnostics"
       ],
       "as_of": "2026-09-22",
       "freshness_class": "context-bound",
-      "support_status": "verified",
+      "support_status": "partial",
       "uncertainty": "Actual implementation, data rights, account availability and event accuracy remain unassessed.",
-      "verification_note": "root independent reopening after researcher handoff; narrow content check, not account or outcome certification."
+      "verification_note": "Official TikTok Business Help article opened 2026-10-29; page says last updated June 2026. Checked the Pixel and Events API setup overview and data-connection workflow. Account-specific setup, consent basis and measurement accuracy remain NOT_ASSESSED.",
+      "support_reviewed_on": "2026-10-29"
     },
     {
       "id": "PREMIUM-META-ORIGINAL-2026",
@@ -750,17 +843,18 @@
       "publisher": "about.fb.com",
       "tier": 1,
       "url": "https://about.fb.com/news/2026/03/rewarding-original-creators-on-facebook/amp/",
-      "verified_on": "2026-09-22",
+      "verified_on": "2026-10-29",
       "review_every_days": 30,
-      "next_review": "2026-10-22",
+      "next_review": "2026-11-28",
       "use_for": [
         "Original content and transformed content"
       ],
       "as_of": "2026-09-22",
       "freshness_class": "context-bound",
-      "support_status": "verified",
+      "support_status": "partial",
       "uncertainty": "Does not establish copyright clearance or guarantee distribution.",
-      "verification_note": "root independent reopening after researcher handoff; narrow content check, not account or outcome certification."
+      "verification_note": "Official Meta newsroom article opened 2026-10-29. It is dated March 2026 by the page path and discusses updated original-content guidance for Feed and Reels. This verifies only what the article says; no reach outcome is promised or inferred, and current account-level distribution is NOT_ASSESSED.",
+      "support_reviewed_on": "2026-10-29"
     },
     {
       "id": "META-ODAX-OBJECTIVES-2026",
@@ -1232,20 +1326,21 @@
       "id": "ANTHROPIC-MODELS-2026",
       "domain": "platform",
       "jurisdiction": "Global; Anthropic API",
-      "title": "Anthropic models overview and retirement floors",
+      "title": "Anthropic models overview",
       "publisher": "Anthropic",
       "tier": 1,
       "url": "https://platform.claude.com/docs/en/models/overview",
-      "verified_on": "2026-09-25",
+      "verified_on": "2026-10-29",
       "review_every_days": 20,
-      "next_review": "2026-10-15",
+      "next_review": "2026-11-18",
       "use_for": [
         "model-currentness review for the Claude side"
       ],
       "freshness_class": "time-sensitive",
-      "support_status": "verified",
+      "support_status": "partial",
       "uncertainty": "Undated page fetched live 2026-09-25; session self-report for the active model.",
-      "verification_note": "Kaizen register MR-01 to MR-03: Claude Haiku 4.5 retirement not sooner than 2026-10-15; Fable 5.1, Opus 5.5 and Sonnet 5 later. Engine skills stay model-agnostic; no skill names Haiku 4.5. Codex/OpenAI pins are out of scope for Claude sessions."
+      "verification_note": "Official Anthropic model overview opened 2026-10-29. Current page lists Claude Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5 with model IDs and capability descriptions. This is a provider catalogue snapshot only; account/runtime availability and comparative task quality, cost and latency are NOT_ASSESSED. Social skills remain model-agnostic.",
+      "support_reviewed_on": "2026-10-29"
     },
     {
       "id": "UG-CMA-2022-VOID-2026",
@@ -1343,19 +1438,19 @@
       "publisher": "Pulse Uganda",
       "tier": 3,
       "url": "https://www.pulse.ug/story/uganda-finally-unblocks-facebook-after-6-years-2026061306180735122",
-      "verified_on": "2026-09-29",
+      "verified_on": "2026-10-31",
       "review_every_days": 30,
-      "next_review": "2026-10-29",
+      "next_review": "2026-11-30",
       "use_for": [
         "Facebook status in Uganda for router defaults, platform-facebook and media planning"
       ],
       "publication_date": "2026-06-13",
-      "accessed_on": "2026-09-29",
+      "accessed_on": "2026-10-31",
       "scope": "Uganda; consumer access to Facebook without a VPN from 13 Jun 2026",
       "freshness_class": "time-sensitive",
       "support_status": "partial",
-      "uncertainty": "Trade press and one minister's post only; the article states no UCC statement confirmed whether the lifting is permanent. No later official confirmation found on 2026-09-29 (searches returned no UCC or wire-service source). Official status NOT_ASSESSED: do not assert Facebook as blocked or as open.",
-      "verification_note": "Read live 2026-09-29: users on several networks reported normal access without a VPN on 13 Jun 2026; Minister of Local Government Balaam Barugahara welcomed the 'unfreezing'. Facebook had been blocked since January 2021. Engine wording: status unstable; verify at the campaign date."
+      "uncertainty": "Trade press and one minister's post only. Re-read on 2026-10-31: the article is dated 13 June 2026 and says UCC had made no statement on whether the lifting was permanent. A further search on 2026-10-31 found no UCC or wire-service confirmation of the Facebook status; separate reports describe election-period restrictions in January 2026 and a restoration announced on 26 January 2026 without settling whether Facebook was included. Official status NOT_ASSESSED: do not assert Facebook as blocked or as open.",
+      "verification_note": "Read live 2026-09-29: users on several networks reported normal access without a VPN on 13 Jun 2026; Minister of Local Government Balaam Barugahara welcomed the 'unfreezing'. Facebook had been blocked since January 2021. Engine wording: status unstable; verify at the campaign date. Re-checked 2026-10-31 (article re-read; official-confirmation search repeated, none found)."
     },
     {
       "id": "UG-INTERNET-SHUTDOWN-2026",

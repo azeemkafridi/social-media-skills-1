@@ -1,0 +1,10 @@
+test_history_and_hooks_are_out_of_scope (test_machine_paths.MachinePathTests.test_history_and_hooks_are_out_of_scope) ... ok
+test_live_checkout_is_clean_within_the_portfolio_allowance (test_machine_paths.MachinePathTests.test_live_checkout_is_clean_within_the_portfolio_allowance) ... ok
+test_ordinary_relative_paths_and_urls_are_not_flagged (test_machine_paths.MachinePathTests.test_ordinary_relative_paths_and_urls_are_not_flagged) ... ok
+test_router_allowance_is_a_ceiling (test_machine_paths.MachinePathTests.test_router_allowance_is_a_ceiling) ... ok
+test_windows_unix_and_mac_host_paths_are_found_in_a_skill (test_machine_paths.MachinePathTests.test_windows_unix_and_mac_host_paths_are_found_in_a_skill) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.453s
+
+OK
